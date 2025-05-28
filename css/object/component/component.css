@@ -43,3 +43,11 @@ html{
     font-size: 10px;
     color:#383E45; 
 }
+.c-fade-hov {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .c-fade-hov:hover {
+    opacity: 0.6; 
+  }
