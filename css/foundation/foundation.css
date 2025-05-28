@@ -1,0 +1,11 @@
+
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a {
+    border-bottom: none;
+    text-decoration: none;  /* 下線が text-decoration の場合に備えて */
+  }

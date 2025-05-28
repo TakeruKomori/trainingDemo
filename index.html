@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta charset="utf-8">
+        <meta http-equiv="content-script-type" content="text/javascript">
+        <meta http-equiv="content-style-type" content="text/css">
+        <title></title>
+        <meta name="Description" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+        <meta name="format-detection" content="telephone=no">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <meta property="og:site_name" content="">
+        <meta name="twitter:site" content="@ユーザー名">
+        <meta name="twitter:card" content="summary_large_image">    
+        <meta name="note:card" content="summary_large_image">
+        <meta property="fb:app_id" content="appID">
+        <meta property="og:locale" content="ja_JP">
+         <!-- ↓使用するファビコン生成ツールによりコードは異なります。 -->
+        <link rel="apple-touch-icon" sizes="180x180" href="">
+        <link rel="icon" type="image/png" sizes="32x32" href="">
+        <link rel="icon" type="image/png" sizes="16x16" href="">
+        <link rel="manifest" href="">
+        <link rel="mask-icon" href="" color="#5bbad5">
+        <link rel="shortcut icon" href="">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="/images/common/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <!-- ↑使用するファビコン生成ツールによりコードは異なります。 -->
+        <link rel="stylesheet" type="text/css" media="all" href="./css/foundation/reset.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/foundation/foundation.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/layout/layout.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/object/component/component.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/object/utility/utility.css">
+        
+        <!-- ↓構造化データ(Articleの場合)、ページによって異なります。 -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "ページURL"
+            },
+            "headline": "タイトル",
+            "description": "説明文",
+            "image": "サムネイル画像（OGP）URL",
+            "author": {
+                "@type": "Organization",
+                "name": "著者",
+                "url": "著者のURL"
+            },  
+            "publisher": {
+                "@type": "Organization",
+                "name": "発行団体",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "発行団体のロゴURL"
+                }
+            },
+            "datePublished": "記事を書いた日（ISO 8601 形式）",
+            "dateModified": "記事を更新した日（ISO 8601 形式）"
+        }
+        </script>
+        <!-- ↑構造化データ(Articleの場合)、ページによって異なります -->
+</head>
+<body class="l-boby c-body">
+    <header class="l-header">
+        <img class="l-header__logo" alt="plofile" src="img/logo.svg"/>
+        <ul class="l-header__nav c-txt c-ls-none">
+            <li class="c-fade-hov"><a href="#l-about__ttl">About</a></li>
+            <li class="c-fade-hov"><a href="#l-bicycle__ttl">Bicycle</a></li>
+        </ul>
+    </header>
+    <div class="l-topView c-cntr">
+        <img class="l-topView__img" alt="実習サイト" src="img/mainvisual.jpg"/>
+    </div>
+    <div class="l-about">
+        <h1 class="l-about__ttl c-ttl c-cntr" id="l-about__ttl">About</h1>
+        <div class="l-about__card ">
+            <img class="l-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
+            <div class="l-about__txtCard">
+                <h2 class="l-about__txt c-ttl-sm">KAKERU MIYAICHI</h2>
+                <p class="l-about__txt c-txt">テキストテキストテキストテキストテキストテキストテキスト<br>
+                    テキストテキストテキストテキストテキストテキストテキスト<br>
+                    テキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+        </div>
+    </div>
+    <div class="l-bicycle c-cntr">
+        <h1 class="l-bicycle__ttl c-ttl c-cntr" id="l-bicycle__ttl">Bicycle</h1>
+        <div class="l-bicycle__box">
+            <a class="l-bicycle__card c-fade-hov">
+                <img alt="" src="img/bicycle1.jpg"/>
+                <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
+                <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
+            </a>
+            <a class="l-bicycle__card c-fade-hov">
+                <img alt="" src="img/bicycle2.jpg"/>
+                <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
+                <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
+            </a>
+            <a class="l-bicycle__card c-fade-hov">
+                <img alt="" src="img/bicycle3.jpg"/>
+                <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
+                <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
+            </a>
+        </div>
+    </div>
+    <footer class="l-footer c-footer c-cntr">
+        <p class="l-footer__txt c-footer">&copy;2020 Profile</p>
+    </footer>
+</body>
+</html>
