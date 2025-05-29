@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.l-bisycleView__img{
+    max-width: 960px;
+    min-height: 600px;
+    width: auto;
+    object-fit: cover;
+    overflow: hidden;
+    ma
+}
+.l-bicycle__cts{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* ---以下レスポンシブ----------------------------------------------*/
+
+@media screen and (max-width: 600px) {
+    .l-bisycleView__img{
+        max-width: 340px;
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        min-height: auto;
+        object-fit: none;
+    }
+
+    }
