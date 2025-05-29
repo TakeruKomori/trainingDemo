@@ -21,8 +21,9 @@
 }
 .l-header{
     display: flex;
-    padding: 0 20%;
-    max-width: 1280px; 
+    margin: 0 auto;
+    padding: 0 4%;
+    max-width: 960px; 
     width: 100%;
     height: 60px;
     justify-content: space-between; /* 左右に分ける */
@@ -87,8 +88,12 @@
     margin: 0 auto;
 }
 .l-bicycle{
-    padding-bottom: 15%;
     margin: 0 auto;
+    padding-bottom: 15%;
+    padding-left: 4%;
+    padding-right: 4%;
+    max-width: 960px;
+    /*imgとコンテンツ幅の上限。*/
 }
 .l-bicycle__box{
     display: flex;
@@ -104,7 +109,6 @@
 }
 .l-bicycle__img-wrap {
     width: 100%;
-    max-width: 263px;
     align-items: center;
     margin: 0 auto;
   }
@@ -117,6 +121,13 @@
 .l-bicycle__ttl{
     margin-top: 0.5em;
 }
+
+.l-goBackTop{
+    max-width: 960px;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+}
+
 .l-footer{
    
     max-width: 1280px;

@@ -11,6 +11,10 @@ html{
     max-width: fit-content;/*ttlの下線幅を合わせるため*/s
     /*中央寄せのクラスが干渉してるので、上下余白を個別指定（タイトル共通余白）*/
 }
+.c-ttl_pages{
+    max-width: fit-content;
+    margin:1rem 0;
+}
 
 
 .c-fade-hov {
