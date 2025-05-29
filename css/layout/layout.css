@@ -3,14 +3,21 @@
 .l-body{
     display: block;
     width: 1280px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
 }
-.l-cts{
-    width: 960px;
+.l-cntr{
+    
     margin: 0 auto;
-    padding: auto 4%;
+    text-align: center;
+}
+
+.l-cts{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: auto 4%;/*仕様書の指定*/
 }
 .l-header{
     display: flex;
@@ -36,10 +43,20 @@
 
 }
 
-
+.l-conts {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 100px;
+}
+ .l-conts.-about {
+    max-width: 600px;
+ }
+ .l-conts.-bicycle {
+    max-width: 960px;
+ }
 
 .l-topView{
-    width: 1280px;
+    max-width: 1280px;
     height: auto;
     margin: 0 auto;
 }
@@ -58,18 +75,20 @@
     border-radius: 50%;
 }
 .l-about__card{
+    max: width 960px;;
     display: flex;             /* 横並びにする */
     gap: 24px;                 /* 要素間の余白 */
-    width: fit-content;        /* 内容に応じた幅 */
+    justify-content: center;
     margin: 0 auto;            /* 中央寄せ！！ */
     align-items: center;
 }
+.l-about__txt{
+    max-width: 400px;/*文字折り返しのため*/
+    margin: 0 auto;
+}
 .l-bicycle{
     padding-bottom: 15%;
-    
     margin: 0 auto;
-    padding-left:4%;
-    padding-right:4%;
 }
 .l-bicycle__box{
     display: flex;
@@ -99,7 +118,8 @@
     margin-top: 0.5em;
 }
 .l-footer{
-    width: fit-content;
+   
+    max-width: 1280px;
     height: 50px;
     align-items: center;
 }
@@ -127,7 +147,9 @@
         margin-bottom: 0.5
         rem;
       }
-    
+      .l-about__txt{
+        max-width: 340px;/*文字折り返しのため*/
+    }
     .l-bicycle__box{
         flex-direction: column;  
     }

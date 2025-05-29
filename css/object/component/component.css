@@ -3,46 +3,16 @@
 html{
     scroll-behavior: smooth;
 }
-.c-cntr{
-    width: fit-content;
-    margin: 0 auto;
-    text-align: center;
-    
-}
 
-.c-ls-none{
-    list-style: none;
-}
 
 .c-ttl{
     margin-top: 3.5em;
     margin-bottom: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 32px;
-    border-bottom: solid 1px;
-    color:#383E45;
+    max-width: fit-content;/*ttlの下線幅を合わせるため*/s
+    /*中央寄せのクラスが干渉してるので、上下余白を個別指定（タイトル共通余白）*/
 }
-.c-ttl-sm{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    color:#383E45;  
-    line-height: 1.8em; 
-}
-.c-txt{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight:normal;
-    font-size: 14.4px;
-    color:#383E45; 
-    line-height: 1.8em; 
-}
-.c-footer{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight:normal;
-    font-size: 10px;
-    color:#383E45; 
-}
+
+
 .c-fade-hov {
     opacity: 1;
     transition: opacity 0.3s ease;
