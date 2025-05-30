@@ -17,14 +17,15 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: #fff;
+    background: #ffffff;
     z-index: 100;
-    transition: 0.7s ease;
-    
+    transition: 0.7s ease;  
 }
+
 .c-pattern.show::before{
     transform: translateX(100%);
 }
+
 .c-pattern img{
     opacity: 0;
     transition: 1.5s ease-in-out;
