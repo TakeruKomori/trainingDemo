@@ -16,5 +16,5 @@ $(window).on('scroll', function() {
     opacity = 0;
   }
 
-  $('.l-topView').css('opacity', opacity);
+  $('.js-scrlFade').css('opacity', opacity);
 });

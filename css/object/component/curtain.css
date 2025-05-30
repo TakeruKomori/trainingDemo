@@ -6,7 +6,7 @@
 }
 .c-pattern{
     position: relative; 
-    overflow: hidden;  
+    overflow: hidden;
 }
 .c-pattern::before{
     transform: translateX(0); 
@@ -19,10 +19,10 @@
     top: 0;
     background: #ffffff;
     z-index: 100;
-    transition: 0.7s ease;  
+    transition: 0.7s ease;
 }
 
-.c-pattern.show::before{
+.c-pattern.is-show::before{
     transform: translateX(100%);
 }
 
@@ -32,16 +32,16 @@
    
     z-index: 1;
 }
-.c-pattern.show img{
+.c-pattern.is-show img{
     opacity: 1;
 }
 
-.c-pattern.show::before{
+.c-pattern.is-show::before{
     transform: translateX(100%);
 }
 
 /*----------------------------------------------_*/
-.c-pattern.show .l-cts{
+.c-pattern.is-show .l-cts{
     opacity: 1;
     transform: translateX(0);
 }
@@ -56,7 +56,7 @@
     transition: 0.2s;
     transition-delay: 0.3s;
 }
-.c-pattern.show .l-cts::before{
+.c-pattern.is-show .l-cts::before{
     transform: translateX(120%) ;
 }
 
