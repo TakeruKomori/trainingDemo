@@ -1,0 +1,61 @@
+
+@charset "UTF-8";
+.c-anime_wrap{
+    position: relative;
+    overflow: hidden;
+}
+.c-pattern{
+    position: relative; 
+    overflow: hidden;  
+}
+.c-pattern::before{
+    transform: translateX(0); 
+    content: '';
+    display: inline-block; 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 100;
+    transition: 0.7s ease;
+    
+}
+.c-pattern.show::before{
+    transform: translateX(100%);
+}
+.c-pattern img{
+    opacity: 0;
+    transition: 1.5s ease-in-out;
+   
+    z-index: 1;
+}
+.c-pattern.show img{
+    opacity: 1;
+}
+
+.c-pattern.show::before{
+    transform: translateX(100%);
+}
+
+/*----------------------------------------------_*/
+.c-pattern.show .l-cts{
+    opacity: 1;
+    transform: translateX(0);
+}
+.c-pattern .l-cts::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #757575;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+}
+.c-pattern.show .l-cts::before{
+    transform: translateX(120%) ;
+}
+
