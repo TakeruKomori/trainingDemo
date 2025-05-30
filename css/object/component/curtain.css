@@ -41,22 +41,22 @@
 }
 
 /*----------------------------------------------_*/
-.c-pattern.is-show .l-cts{
+.c-pattern.is-show {
     opacity: 1;
     transform: translateX(0);
 }
-.c-pattern .l-cts::before{
+.c-pattern::before{
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
-    background: #757575;
+    background: #ffffff;
     transition: 0.2s;
     transition-delay: 0.3s;
 }
-.c-pattern.is-show .l-cts::before{
+.c-pattern.is-show::before{
     transform: translateX(120%) ;
 }
 

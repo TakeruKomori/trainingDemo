@@ -11,7 +11,8 @@ function checkAnimeTrigger() {
   }
   
   // スクロール時に実行
-  $(window).scroll(function () {
+  //$(window).scroll(function () {
+    $(window).on("scroll", function () {
     checkAnimeTrigger();
   });
   

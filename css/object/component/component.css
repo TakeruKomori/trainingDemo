@@ -21,10 +21,6 @@ html{
     opacity: 1;
     transition: opacity 0.3s ease;
   }
-  
-  .c-fade-hov:hover {
-    opacity: 0.6; 
-  }
 /*ホバーハイライト用*/
   .l-bicycle__card .c-txt,
   .l-bicycle__card .c-ttl-sm {
@@ -32,18 +28,26 @@ html{
     background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
     background-size: 0% 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.4s ease-in-out;
+    transition: background-size var(--sec) ease-in-out;
     
   }
   
   .l-bicycle__card:hover .c-txt,
   .l-bicycle__card:hover .c-ttl-sm {
     background-size: 100% 100%;
-    color: white;
+    color: var(--color);
   }
-  .l-bicycle__card:hover .l-bicycle__card__img {
-    opacity: 0.6;
-    transition: 0.3s;
+
+  @media(hover:hover){
+    .l-bicycle__card:hover .c-txt,
+    .l-bicycle__card:hover .c-ttl-sm {
+      background-size: 100% 100%;
+      color:  var(--color);
+    }
+
+    .c-fade-hov:hover {
+      opacity: 0.6; 
+    }
   }
 
   @media screen and (max-width: 600px) {

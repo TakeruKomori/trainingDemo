@@ -1,5 +1,9 @@
 
 @charset "UTF-8";
+:root{
+  --color:white;
+  --sec:0.4s;
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +16,7 @@
   }
   ul, li, p, a{
     font-family: Arial, Helvetica, sans-serif;
-    font-weight:normal;
+    
     font-size: 14.4px;
     color:#383E45; 
     line-height: 1.8em; 
@@ -21,7 +25,7 @@
 
   h1{
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    
     font-size: 32px;
     border-bottom: solid 1px;
     color:#383E45;
@@ -29,14 +33,14 @@
 
   h2{
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+   
     font-size: 16px;
     color:#383E45;  
     line-height: 1.8em; 
   }
   h3{
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    
     font-size: 21.6px;
     color:#383E45;  
    
@@ -44,7 +48,7 @@
   }
   footer p{
     font-family: Arial, Helvetica, sans-serif;
-    font-weight:normal;
+    
     font-size: 10px;
     color:#383E45; 
   }
