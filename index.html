@@ -35,6 +35,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="./css/foundation/foundation.css">
         <link rel="stylesheet" type="text/css" media="all" href="./css/layout/layout.css">
         <link rel="stylesheet" type="text/css" media="all" href="./css/object/component/component.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/object/component/curtain.css">
         <link rel="stylesheet" type="text/css" media="all" href="./css/object/utility/utility.css">
         
         <!-- ↓構造化データ(Articleの場合)、ページによって異なります。 -->
@@ -69,21 +70,21 @@
         <!-- ↑構造化データ(Articleの場合)、ページによって異なります -->
 </head>
 <body class="l-boby c-body">
-    <header class="l-header">
-        <a href="index.html">
-            <img class="l-header__logo c-fade-hov" alt="plofile" src="img/logo.svg"/>
+    <header class="l-header c-anime_wrap c-pattern">
+        <a href="index.html" class=" c-fade-hov">
+            <img class="l-header__logo" alt="plofile" src="img/logo.svg"/>
         </a>
         <ul class="l-header__nav">
             <li class="c-fade-hov"><a href="#l-about__ttl">About</a></li>
             <li class="c-fade-hov"><a href="#l-bicycle__ttl">Bicycle</a></li>
         </ul>
     </header>
-    <div class="l-topView l-cntr">
+    <div class="l-topView l-cntr c-anime_wrap c-pattern">
         <img class="l-topView__img" alt="実習サイト" src="img/mainvisual.jpg"/>
     </div>
-    <div class="l-about l-cts">
+    <div class="l-about l-cts  c-anime_wrap c-pattern">
         <h1 class="l-about__ttl c-ttl l-cntr" id="l-about__ttl">About</h1>
-        <div class="l-about__card l-cntr ">
+        <div class="l-about__card l-cntr">
             <img class="l-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
             <div class="l-about__txtCard u-txt-L">
                 <h2 class="l-about__txt c-ttl-sm">KAKERU MIYAICHI</h2>
@@ -95,24 +96,24 @@
             </div>
         </div>
     </div>
-    <div class="l-bicycle l-cts">
+    <div class="l-bicycle l-cts c-anime_wrap c-pattern">
         <h1 class="l-bicycle__ttl c-ttl l-cntr" id="l-bicycle__ttl">Bicycle</h1>
         <div class="l-bicycle__box">
-            <a class="l-bicycle__card c-fade-hov" href="bicycle/bicycle1.html">
+            <a class="l-bicycle__card " href="bicycle/bicycle1.html">
                 <div class="l-bicycle__img-wrap">
                     <img class="l-bicycle__card__img"  alt="" src="img/bicycle1.jpg"/>
-                    <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
+                    <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル<br></h2>
                     <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
-            </div>
+                </div>
             </a>
-            <a class="l-bicycle__card c-fade-hov" href="bicycle/bicycle2.html">
+            <a class="l-bicycle__card" href="bicycle/bicycle2.html">
                 <div class="l-bicycle__img-wrap">
                     <img class="l-bicycle__card__img" alt="" src="img/bicycle2.jpg"/>
                     <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
                     <p class="l-bicycle__txt c-txt">テキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </div>
             </a>
-            <a class="l-bicycle__card c-fade-hov" href="bicycle/bicycle3.html">
+            <a class="l-bicycle__card" href="bicycle/bicycle3.html">
                 <div class="l-bicycle__img-wrap">
                     <img class="l-bicycle__card__img"  alt="" src="img/bicycle3.jpg"/>
                     <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
@@ -124,5 +125,11 @@
     <footer class="l-footer c-footer l-cntr">
         <p class="l-footer__txt">&copy;2020 Profile</p>
     </footer>
+    <!-- jQuery CDN（Google Hosted） -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/js/jquery-3.7.1.min.js"><\/script>')</script>
+    <script src="js/curtain.js"></script>
+    <script src="js/scrollFade.js"></script>
+    
 </body>
 </html>

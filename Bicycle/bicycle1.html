@@ -36,6 +36,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="../css/layout/layout.css">
         <link rel="stylesheet" type="text/css" media="all" href="../css/layout/l-bicycle.css">
         <link rel="stylesheet" type="text/css" media="all" href="../css/object/component/component.css">
+        <link rel="stylesheet" type="text/css" media="all" href="../css/object/component/curtain.css">
         <link rel="stylesheet" type="text/css" media="all" href="../css/object/utility/utility.css">
         
         <!-- ↓構造化データ(Articleの場合)、ページによって異なります。 -->
@@ -70,21 +71,21 @@
         <!-- ↑構造化データ(Articleの場合)、ページによって異なります -->
 </head>
 <body class="l-boby ">
-    <header class="l-header l-cntr">
-        <a href="../index.html">
-            <img class="l-header__logo c-fade-hov" alt="plofile" src="../img/logo.svg"/>
+    <header class="l-header l-cntr c-anime_wrap c-pattern">
+        <a href="../index.html" class="c-fade-hov">
+            <img class="l-header__logo " alt="plofile" src="../img/logo.svg"/>
         </a>
         <ul class="l-header__nav">
-            <li class="c-fade-hov"><a href="#l-about__ttl">About</a></li>
-            <li class="c-fade-hov"><a href="#l-bicycle__ttl">Bicycle</a></li>
+            <li class="c-fade-hov"><a href="../index.html#l-about__ttl">About</a></li>
+            <li class="c-fade-hov"><a href="../index.html#l-bicycle__ttl">Bicycle</a></li>
         </ul>
     </header>
-    <div class="l-bicycle__cts">
-        <div class="l-bisycleView l-cntr">
+    <div class="l-bicycle__cts c-anime_wrap c-pattern">
+        <div class="l-bicycleView l-cntr">
             <img class="l-bicycleView__img l-cntr" alt="実習サイト" src="../img/bicycle1.jpg" />
         </div>
     
-        <div class="l-cts">
+        <div class="l-cts  ">
                 <h3 class=" c-ttl_pages " id="l-bicycle__ttl">Bicycle</h3>
                 <p class=" c-txt">テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト
                     １テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１</p>
@@ -102,5 +103,22 @@
     <footer class="l-footer c-footer l-cntr">
         <p class="l-footer__txt">&copy;2020 Profile</p>
     </footer>
+     <!-- jQuery CDN（Google Hosted） -->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+     <script>window.jQuery || document.write('<script src="/js/jquery-3.7.1.min.js"><\/script>')</script>
+     <script src="../js/curtain.js"></script>
+     <script>
+     $(window).on('load scroll', function () {
+         $(".c-anime_wrap").each(function () {
+             var offset  = $(this).offset().top;
+             var scroll  = $(window).scrollTop();
+             var wHeight = $(window).height();
+ 
+             if (scroll > offset - wHeight + wHeight / 2) {
+                 $(this).addClass("show");
+             }
+         });
+     });
+       </script>
 </body>
 </html>

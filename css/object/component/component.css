@@ -8,9 +8,9 @@ html{
 .c-ttl{
     margin-top: 3.5em;
     margin-bottom: 2em;
-    max-width: fit-content;/*ttlの下線幅を合わせるため*/s
+    max-width: fit-content;/*ttlの下線幅を合わせるため*/
     /*中央寄せのクラスが干渉してるので、上下余白を個別指定（タイトル共通余白）*/
-}
+  }
 .c-ttl_pages{
     max-width: fit-content;
     margin:1rem 0;
@@ -24,4 +24,36 @@ html{
   
   .c-fade-hov:hover {
     opacity: 0.6; 
+  }
+/*ホバーハイライト用*/
+  .l-bicycle__card .c-txt,
+  .l-bicycle__card .c-ttl-sm {
+    display:inline-block;
+    background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease-in-out;
+    
+  }
+  
+  .l-bicycle__card:hover .c-txt,
+  .l-bicycle__card:hover .c-ttl-sm {
+    background-size: 100% 100%;
+    color: white;
+  }
+  .l-bicycle__card:hover .l-bicycle__card__img {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  @media screen and (max-width: 600px) {
+    .l-bicycle__card .c-txt,
+    .l-bicycle__card .c-ttl-sm {
+      display: inline-block;
+    } 
+    .l-bicycle__img-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* 左寄せ */
+    }
   }
