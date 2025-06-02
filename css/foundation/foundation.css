@@ -2,53 +2,27 @@
 @charset "UTF-8";
 :root{
   --color:white;
-  --sec:0.4s;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  a {
+
+  body,a{/*aタグ指定しないと何故か効かない*/
+    font-family: Arial, Helvetica, sans-serif;
+    color:#383E45; 
+    font-size: 14.4px;
+    line-height: 1.8em; 
+    list-style: none;
+  }
+
+  li,a{
     list-style: none;
     border-bottom: none;
     text-decoration: none;  /* 下線が text-decoration の場合に備えて */
   }
-  ul, li, p, a{
-    font-family: Arial, Helvetica, sans-serif;
-    
-    font-size: 14.4px;
-    color:#383E45; 
-    line-height: 1.8em; 
-    list-style: none;
-  }
 
-  h1{
-    font-family: Arial, Helvetica, sans-serif;
-    
-    font-size: 32px;
-    border-bottom: solid 1px;
-    color:#383E45;
-  }
-
-  h2{
-    font-family: Arial, Helvetica, sans-serif;
-   
-    font-size: 16px;
-    color:#383E45;  
-    line-height: 1.8em; 
-  }
-  h3{
-    font-family: Arial, Helvetica, sans-serif;
-    
-    font-size: 21.6px;
-    color:#383E45;  
-   
-    line-height: 1.8em; 
-  }
   footer p{
-    font-family: Arial, Helvetica, sans-serif;
-    
     font-size: 10px;
-    color:#383E45; 
   }

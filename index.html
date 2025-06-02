@@ -70,56 +70,64 @@
         <!-- ↑構造化データ(Articleの場合)、ページによって異なります -->
 </head>
 <body class="l-boby c-body">
-    <header class="l-header c-anime_wrap js-ctWrap c-pattern">
-        <a href="index.html" class=" c-fade-hov">
-            <img class="l-header__logo" alt="plofile" src="img/logo.svg"/>
-        </a>
-        <ul class="l-header__nav">
-            <li class="c-fade-hov"><a href="#l-about__ttl">About</a></li>
-            <li class="c-fade-hov"><a href="#l-bicycle__ttl">Bicycle</a></li>
-        </ul>
+    <header class="l-header">
+        <div class="l-header__inner c-anime_wrap js-ctWrap c-pattern"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
+            <a href="index.html" class=" c-fade-hov">
+                <img class="l-header__logo" alt="plofile" src="img/logo.svg"/>
+            </a>
+            <ul class="l-header__nav">
+                <li class="c-fade-hov"><a href="#l-about__ttl">About</a></li>
+                <li class="c-fade-hov"><a href="#l-bicycle__ttl">Bicycle</a></li>
+            </ul>
+        </div>
     </header>
-    <div class="l-topView l-cntr c-anime_wrap c-pattern js-ctWrap js-scrlFade">
+    <div class="l-topView l-cntr">
+        <div class="c-anime_wrap c-pattern js-ctWrap js-scrlFade"><!---カーテン,scrlFade用-->
         <img class="l-topView__img" alt="実習サイト" src="img/mainvisual.jpg"/>
+        </div>
     </div>
-    <div class="l-about l-cts  c-anime_wrap js-ctWrap c-pattern">
-        <h1 class="l-about__ttl c-ttl l-cntr" id="l-about__ttl">About</h1>
-        <div class="l-about__card l-cntr">
-            <img class="l-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
-            <div class="l-about__txtCard u-txt-L">
-                <h2 class="l-about__txt c-ttl-sm">KAKERU MIYAICHI</h2>
-                <p class="l-about__txt ">テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキスト
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                </p>
+    <div class="l-about l-cts">
+        <div class="c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
+            <h1 class="l-about__ttl c-ttl l-cntr" id="l-about__ttl">About</h1>
+            <div class="l-about__card l-cntr">
+                <img class="l-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
+                <div class="l-about__txtCard u-txt-L">
+                    <h2 class="l-about__txt c-ttl-sm">KAKERU MIYAICHI</h2>
+                    <p class="l-about__txt ">テキストテキストテキストテキストテキストテキストテキスト<br>
+                        テキストテキストテキストテキストテキストテキストテキスト<br>
+                        テキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="l-bicycle l-cts c-anime_wrap js-ctWrap c-pattern">
-        <h1 class="l-bicycle__ttl c-ttl l-cntr" id="l-bicycle__ttl">Bicycle</h1>
-        <div class="l-bicycle__box">
-            <a class="l-bicycle__card " href="bicycle/bicycle1.html">
-                <div class="l-bicycle__img-wrap">
-                    <img class="l-bicycle__card__img"  alt="" src="img/bicycle1.jpg"/>
-                    <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル<br></h2>
-                    <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
-                </div>
-            </a>
-            <a class="l-bicycle__card" href="bicycle/bicycle2.html">
-                <div class="l-bicycle__img-wrap">
-                    <img class="l-bicycle__card__img" alt="" src="img/bicycle2.jpg"/>
-                    <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
-                    <p class="l-bicycle__txt c-txt">テキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                </div>
-            </a>
-            <a class="l-bicycle__card" href="bicycle/bicycle3.html">
-                <div class="l-bicycle__img-wrap">
-                    <img class="l-bicycle__card__img"  alt="" src="img/bicycle3.jpg"/>
-                    <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
-                    <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
-                </div>
-            </a>
+    <div class="l-bicycle l-cts">
+        <div class="c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
+            <h1 class="l-bicycle__ttl c-ttl l-cntr" id="l-bicycle__ttl">Bicycle</h1>
+            <div class="l-bicycle__box">
+                <a class="l-bicycle__card " href="bicycle/bicycle1.html">
+                    <div class="l-bicycle__img-wrap">
+                        <img class="l-bicycle__card__img"  alt="" src="img/bicycle1.jpg"/>
+                        <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル<br></h2>
+                        <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
+                    </div>
+                </a>
+                <a class="l-bicycle__card" href="bicycle/bicycle2.html">
+                    <div class="l-bicycle__img-wrap">
+                        <img class="l-bicycle__card__img" alt="" src="img/bicycle2.jpg"/>
+                        <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
+                        <p class="l-bicycle__txt c-txt">テキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </div>
+                </a>
+                <a class="l-bicycle__card" href="bicycle/bicycle3.html">
+                    <div class="l-bicycle__img-wrap">
+                        <img class="l-bicycle__card__img"  alt="" src="img/bicycle3.jpg"/>
+                        <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
+                        <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
     <footer class="l-footer c-footer l-cntr">

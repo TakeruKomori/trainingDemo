@@ -1,5 +1,9 @@
 
 @charset "UTF-8";
+:root{
+  --color: white;
+  --sec:0.5s;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -10,12 +14,19 @@ html{
     margin-bottom: 2em;
     max-width: fit-content;/*ttlの下線幅を合わせるため*/
     /*中央寄せのクラスが干渉してるので、上下余白を個別指定（タイトル共通余白）*/
+    font-size: 32px;
+    border-bottom: solid 1px;
   }
 .c-ttl_pages{
     max-width: fit-content;
     margin:1rem 0;
+    font-size: 21.6px;
+    line-height: 1.8em; 
 }
-
+.c-ttl-sm{
+    font-size: 16px;
+    line-height: 1.8em; 
+}
 
 .c-fade-hov {
     opacity: 1;
@@ -37,18 +48,18 @@ html{
     background-size: 100% 100%;
     color: var(--color);
   }
-
+/*
   @media(hover:hover){
     .l-bicycle__card:hover .c-txt,
     .l-bicycle__card:hover .c-ttl-sm {
       background-size: 100% 100%;
       color:  var(--color);
     }
-
+*/
     .c-fade-hov:hover {
       opacity: 0.6; 
     }
-  }
+  
 
   @media screen and (max-width: 600px) {
     .l-bicycle__card .c-txt,
