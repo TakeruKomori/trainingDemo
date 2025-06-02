@@ -21,7 +21,7 @@ lenis.on("scroll", () => {
     const rect = el.getBoundingClientRect();
     if (rect.top < windowHeight && rect.bottom > 0) {
       const ratio = rect.top / windowHeight;
-      const offset = ratio * 60;
+      const offset = ratio * 20;
       el.style.transform = `translateY(${offset}px)`;
     }
   });

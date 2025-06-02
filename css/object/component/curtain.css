@@ -60,3 +60,13 @@
     transform: translateX(120%) ;
 }
 
+
+.c-pattern2 img{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+}
+.c-pattern2.is-show img{
+    opacity: 1;
+    transform: translateY(0);
+}
