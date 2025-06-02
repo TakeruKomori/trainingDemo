@@ -63,8 +63,8 @@
 
 .c-pattern2 img{
     opacity: 0;
-    transform: translateY(10px);
-    transition: 0.8s;
+    transform: translateY(10%);
+    transition: 0.5s ease-in-out;
 }
 .c-pattern2.is-show img{
     opacity: 1;
