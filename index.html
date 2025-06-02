@@ -87,17 +87,19 @@
         </div>
     </div>
     <div class="l-about l-cts">
-        <div class="c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
+        <div class="js-about-wrap c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
             <h1 class="l-about__ttl c-ttl l-cntr" id="l-about__ttl">About</h1>
             <div class="l-about__card l-cntr">
-                <img class="l-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
-                <div class="l-about__txtCard u-txt-L">
-                    <h2 class="l-about__txt c-ttl-sm">KAKERU MIYAICHI</h2>
-                    <p class="l-about__txt ">テキストテキストテキストテキストテキストテキストテキスト<br>
-                        テキストテキストテキストテキストテキストテキストテキスト<br>
-                        テキストテキストテキストテキストテキストテキスト
-                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    </p>
+                <div class="u-about__card_inner js-parallax">
+                    <img class="l-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
+                    <div class="l-about__txtCard u-txt-L">
+                        <h2 class="l-about__txt c-ttl-sm">KAKERU MIYAICHI</h2>
+                        <p class="l-about__txt ">テキストテキストテキストテキストテキストテキストテキスト<br>
+                            テキストテキストテキストテキストテキストテキストテキスト<br>
+                            テキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,27 +108,29 @@
         <div class="c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
             <h1 class="l-bicycle__ttl c-ttl l-cntr" id="l-bicycle__ttl">Bicycle</h1>
             <div class="l-bicycle__box">
-                <a class="l-bicycle__card " href="bicycle/bicycle1.html">
-                    <div class="l-bicycle__img-wrap">
-                        <img class="l-bicycle__card__img"  alt="" src="img/bicycle1.jpg"/>
-                        <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル<br></h2>
-                        <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
-                    </div>
-                </a>
-                <a class="l-bicycle__card" href="bicycle/bicycle2.html">
-                    <div class="l-bicycle__img-wrap">
-                        <img class="l-bicycle__card__img" alt="" src="img/bicycle2.jpg"/>
-                        <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
-                        <p class="l-bicycle__txt c-txt">テキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </div>
-                </a>
-                <a class="l-bicycle__card" href="bicycle/bicycle3.html">
-                    <div class="l-bicycle__img-wrap">
-                        <img class="l-bicycle__card__img"  alt="" src="img/bicycle3.jpg"/>
-                        <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
-                        <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
-                    </div>
-                </a>
+                <div class="u-bicycle__box_inner js-parallax" data-offset="150">
+                    <a class="l-bicycle__card " href="bicycle/bicycle1.html">
+                        <div class="l-bicycle__img-wrap">
+                            <img class="l-bicycle__card__img"  alt="" src="img/bicycle1.jpg"/>
+                            <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル<br></h2>
+                            <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
+                        </div>
+                    </a>
+                    <a class="l-bicycle__card" href="bicycle/bicycle2.html">
+                        <div class="l-bicycle__img-wrap">
+                            <img class="l-bicycle__card__img" alt="" src="img/bicycle2.jpg"/>
+                            <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
+                            <p class="l-bicycle__txt c-txt">テキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </div>
+                    </a>
+                    <a class="l-bicycle__card" href="bicycle/bicycle3.html">
+                        <div class="l-bicycle__img-wrap">
+                            <img class="l-bicycle__card__img"  alt="" src="img/bicycle3.jpg"/>
+                            <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
+                            <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -138,6 +142,8 @@
     <script>window.jQuery || document.write('<script src="/js/jquery-3.7.1.min.js"><\/script>')</script>
     <script src="js/curtain.js"></script>
     <script src="js/scrollFade.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+    <script src="js/lenis.js"></script> 
     
 </body>
 </html>

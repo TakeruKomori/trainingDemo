@@ -19,7 +19,7 @@
     top: 0;
     background: #ffffff;
     z-index: 100;
-    transition: 0.7s ease;
+    transition: 5s ease;
 }
 
 .c-pattern.is-show::before{
@@ -53,7 +53,7 @@
     left: 0;
     top: 0;
     background: #ffffff;
-    transition: 0.2s;
+    transition: 0.5s 1.5s ease;
     transition-delay: 0.3s;
 }
 .c-pattern.is-show::before{

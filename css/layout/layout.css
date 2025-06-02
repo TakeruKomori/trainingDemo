@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 .l-cntr{
-    
+
     margin: 0 auto;
     text-align: center;
 }
@@ -80,6 +80,7 @@
     height: auto;
     display: block;
     border-radius: 50%;
+    margin: 1em;
 }
 .l-about__card{
     max-width: var(--max-width);
@@ -135,7 +136,6 @@
 }
 
 .l-footer{
-   
     max-width: 1280px;
     height: 50px;
     align-items: center;
@@ -154,10 +154,7 @@
         padding: 0 4%; 
         box-sizing: border-box;
     }
-    .l-about__card{
-        display: block;
-        margin: auto 1rem;
-    }
+ 
     .l-about__img {
         display: block;
         margin: 0 auto;
@@ -166,9 +163,6 @@
       }
       .l-about__txt{
         max-width: 340px;/*文字折り返しのため*/
-    }
-    .l-bicycle__box{
-        flex-direction: column;  
     }
 
     .l-bicycle__card{

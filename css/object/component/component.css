@@ -3,6 +3,7 @@
 :root{
   --color: white;
   --sec:0.5s;
+  --line-height: 1.8em; 
 }
 html{
     scroll-behavior: smooth;
@@ -21,11 +22,11 @@ html{
     max-width: fit-content;
     margin:1rem 0;
     font-size: 21.6px;
-    line-height: 1.8em; 
+    line-height: var(--line-height); 
 }
 .c-ttl-sm{
     font-size: 16px;
-    line-height: 1.8em; 
+    line-height: var(--line-height); 
 }
 
 .c-fade-hov {
@@ -48,14 +49,14 @@ html{
     background-size: 100% 100%;
     color: var(--color);
   }
-/*
+
   @media(hover:hover){
     .l-bicycle__card:hover .c-txt,
     .l-bicycle__card:hover .c-ttl-sm {
       background-size: 100% 100%;
       color:  var(--color);
     }
-*/
+
     .c-fade-hov:hover {
       opacity: 0.6; 
     }
