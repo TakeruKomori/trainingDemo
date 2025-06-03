@@ -37,6 +37,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="../css/layout/l-bicycle.css">
         <link rel="stylesheet" type="text/css" media="all" href="../css/object/component/component.css">
         <link rel="stylesheet" type="text/css" media="all" href="../css/object/component/curtain.css">
+        <link rel="stylesheet" type="text/css" media="all" href="../css/object/project/project.css">
         <link rel="stylesheet" type="text/css" media="all" href="../css/object/utility/utility.css">
         
         <!-- ↓構造化データ(Articleの場合)、ページによって異なります。 -->
@@ -71,12 +72,14 @@
         <!-- ↑構造化データ(Articleの場合)、ページによって異なります -->
 </head>
 <body class="l-boby  ">
-    <header class="l-header l-cntr">
-        <div class="l-header__inner c-anime_wrap js-ctWrap c-pattern">
-            <a href="../index.html" class=" c-fade-hov">
-                <img class="l-header__logo" alt="plofile" src="../img/logo.svg"/>
+    <header class="l-header">
+        <div class="p-header__inner c-anime_wrap js-ctWrap c-pattern"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
+            <div class="l-header__logo">
+            <a href="index.html" class=" c-fade-hov">
+                <img class="p-header__logo" alt="plofile" src="../img/logo.svg"/>
             </a>
-            <ul class="l-header__nav">
+        </div>
+            <ul class="p-header__nav">
                 <li class="c-fade-hov"><a href="../index.html#l-about__ttl">About</a></li>
                 <li class="c-fade-hov"><a href="../index.html#l-bicycle__ttl">Bicycle</a></li>
             </ul>
@@ -89,7 +92,7 @@
             </div>
         
             <div class="l-cts">
-                    <h3 class=" c-ttl_pages " id="l-bicycle__ttl">Bicycle2</h3>
+                    <h1 class=" c-ttl_pages " id="l-bicycle__ttl">Bicycle2</h1>
                     <p class=" c-txt">テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト
                         １テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２</p>
                     <p class=" c-txt">テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト２テキスト

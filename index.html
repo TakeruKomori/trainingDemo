@@ -36,6 +36,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="./css/layout/layout.css">
         <link rel="stylesheet" type="text/css" media="all" href="./css/object/component/component.css">
         <link rel="stylesheet" type="text/css" media="all" href="./css/object/component/curtain.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/object/project/project.css">
         <link rel="stylesheet" type="text/css" media="all" href="./css/object/utility/utility.css">
         
         <!-- ↓構造化データ(Articleの場合)、ページによって異なります。 -->
@@ -71,11 +72,13 @@
 </head>
 <body class="l-boby c-body">
     <header class="l-header">
-        <div class="l-header__inner c-anime_wrap js-ctWrap c-pattern"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
+        <div class="p-header__inner c-anime_wrap js-ctWrap c-pattern"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
+            <h1 class="l-header__logo">
             <a href="index.html" class=" c-fade-hov">
-                <img class="l-header__logo" alt="plofile" src="img/logo.svg"/>
+                <img class="p-header__logo" alt="plofile" src="img/logo.svg"/>
             </a>
-            <ul class="l-header__nav">
+            </h1>
+            <ul class="p-header__nav">
                 <li class="c-fade-hov"><a href="#l-about__ttl">About</a></li>
                 <li class="c-fade-hov"><a href="#l-bicycle__ttl">Bicycle</a></li>
             </ul>
@@ -88,7 +91,7 @@
     </div>
     <div class="l-about l-cts">
         <div class="js-about-wrap c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
-            <h1 class="l-about__ttl c-ttl l-cntr" id="l-about__ttl">About</h1>
+            <p class="l-about__ttl c-ttl l-cntr" id="l-about__ttl">About</p>
             <div class="l-about__card l-cntr">
                 <div class="u-about__card_inner js-parallax c-pattern2 js-ctWrap c-anime_wrap">
                     <img class="l-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
@@ -106,32 +109,32 @@
     </div>
     <div class="l-bicycle l-cts">
         <div class="c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
-            <h1 class="l-bicycle__ttl c-ttl l-cntr" id="l-bicycle__ttl">Bicycle</h1>
-            <div class="l-bicycle__box">
+            <p class="l-bicycle__ttl c-ttl l-cntr" id="l-bicycle__ttl">Bicycle</p>
+            <ul class="l-bicycle__box">
                 <div class="u-bicycle__box_inner js-parallax" data-offset="150">
-                    <a class="l-bicycle__card " href="bicycle/bicycle1.html">
+                    <li class="l-bicycle__card " href="bicycle/bicycle1.html">
                         <div class="l-bicycle__img-wrap">
                             <img class="l-bicycle__card__img"  alt="" src="img/bicycle1.jpg"/>
                             <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル<br></h2>
                             <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
                         </div>
-                    </a>
-                    <a class="l-bicycle__card" href="bicycle/bicycle2.html">
+                    </li>
+                    <li class="l-bicycle__card" href="bicycle/bicycle2.html">
                         <div class="l-bicycle__img-wrap">
                             <img class="l-bicycle__card__img" alt="" src="img/bicycle2.jpg"/>
                             <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
                             <p class="l-bicycle__txt c-txt">テキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
-                    </a>
-                    <a class="l-bicycle__card" href="bicycle/bicycle3.html">
+                    </li>
+                    <li class="l-bicycle__card" href="bicycle/bicycle3.html">
                         <div class="l-bicycle__img-wrap">
                             <img class="l-bicycle__card__img"  alt="" src="img/bicycle3.jpg"/>
                             <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
                             <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
                         </div>
-                    </a>
+                    </li>
                 </div>
-            </div>
+            </ul>
         </div>
     </div>
     <footer class="l-footer c-footer l-cntr">

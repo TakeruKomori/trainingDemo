@@ -3,7 +3,6 @@
 :root{
   --color: white;
   --sec:0.5s;
-  --line-height: 1.8em; 
 }
 html{
     scroll-behavior: smooth;
@@ -17,16 +16,15 @@ html{
     /*中央寄せのクラスが干渉してるので、上下余白を個別指定（タイトル共通余白）*/
     font-size: 32px;
     border-bottom: solid 1px;
+    font-weight: bold;
   }
 .c-ttl_pages{
     max-width: fit-content;
     margin:1rem 0;
     font-size: 21.6px;
-    line-height: var(--line-height); 
 }
 .c-ttl-sm{
     font-size: 16px;
-    line-height: var(--line-height); 
 }
 
 .c-fade-hov {

@@ -9,14 +9,17 @@
     box-sizing: border-box;
   }
 
-  body,a{/*aタグ指定しないと何故か効かない*/
+  body{/*aタグ指定しないと何故か効かない*/
     font-family: Arial, Helvetica, sans-serif;
-    color:#383E45; 
+    
     font-size: 14.4px;
     line-height: 1.8em; 
     list-style: none;
   }
-
+  a{
+    color:#383E45; 
+  }
+  
   li,a{
     list-style: none;
     border-bottom: none;
