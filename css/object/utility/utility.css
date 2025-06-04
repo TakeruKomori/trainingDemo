@@ -9,11 +9,6 @@ body{
     text-align: left!important;
 }
 
-.js-zoom-scroll {
-    display: block;
-    transition: transform 0.3s ease-out;
-    will-change: transform;
-  }
 @media screen and (max-width: 600px) {
     
 
