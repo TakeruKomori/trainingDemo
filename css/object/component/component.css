@@ -10,13 +10,12 @@ html{
 
 
 .c-ttl{
-    margin-top: 3.5em;
-    margin-bottom: 2em;
     max-width: fit-content;/*ttlの下線幅を合わせるため*/
     /*中央寄せのクラスが干渉してるので、上下余白を個別指定（タイトル共通余白）*/
     font-size: 32px;
     border-bottom: solid 1px;
     font-weight: bold;
+    margin-bottom: 5%;
   }
 .c-ttl_pages{
     max-width: fit-content;

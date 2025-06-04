@@ -19,15 +19,15 @@
 .l-cts{
     max-width: var(--max-width);
     width: 100%;
-    margin: 0 auto;
-    padding: auto 4%;/*仕様書の指定*/
+    margin: 10% auto;
+    padding: 0 4%;/*仕様書の指定*/
 }
 .l-header{
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 4%;
 }
-
+/*
 .l-conts {
     margin-right: auto;
     margin-left: auto;
@@ -39,7 +39,7 @@
  .l-conts.-bicycle {
     max-width: var(--max-width);
  }
-
+*/
 .l-topView{
     max-width: 12800px;
     height: 95vh;
@@ -65,7 +65,7 @@
     display: flex;             /* 横並びにする */
     gap: 24px;                 /* 要素間の余白 */
     justify-content: center;
-    margin: 0 auto;            /* 中央寄せ！！ */
+    margin: 0.5rem auto;            /* 中央寄せ！！ */
     align-items: center;
 }
 .l-about__txt{

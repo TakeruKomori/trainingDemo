@@ -21,6 +21,17 @@
     margin-right: 2em;
 
 }
+.p-about__card_inner{
+    display: flex;             /* 横並びにする */      
+    justify-content: center;
+    /* 中央寄せ！！ */
+    align-items: center;
+}
+.p-bicycle__box_inner{
+    display: flex;
+    /*flex-wrap: wrap; */
+    justify-content: center;
+}
 
 
 
@@ -28,5 +39,12 @@
     .p-topView__img{
         width: auto;
     }
+    .p-about__card_inner{
+        display: block;
+        margin: auto 1rem;
+    }
 
+    .p-bicycle__box_inner{
+        flex-direction: column;   
+    }
 }

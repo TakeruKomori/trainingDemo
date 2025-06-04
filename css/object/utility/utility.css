@@ -8,17 +8,7 @@ body{
 .u-txt-L{
     text-align: left!important;
 }
-.u-about__card_inner{
-    display: flex;             /* 横並びにする */                /* 要素間の余白 */
-    justify-content: center;
-    /* 中央寄せ！！ */
-    align-items: center;
-}
-.u-bicycle__box_inner{
-    display: flex;
-    /*flex-wrap: wrap; */
-    justify-content: center;
-}
+
 .js-zoom-scroll {
     display: block;
     transition: transform 0.3s ease-out;
@@ -26,14 +16,5 @@ body{
   }
 @media screen and (max-width: 600px) {
     
-    .u-about__card_inner{
-        display: block;
-        margin: auto 1rem;
-    }
-
-    .u-bicycle__box_inner{
-        flex-direction: column;   
-    }
-
 
 }

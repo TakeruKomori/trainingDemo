@@ -75,10 +75,10 @@
         <div class="p-header__inner c-anime_wrap js-ctWrap c-pattern"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
             <h1 class="l-header__logo">
             <a href="index.html" class=" c-fade-hov">
-                <img class="p-header__logo" alt="plofile" src="img/logo.svg"/>
+                <img class="l-header__logo p-header__logo" alt="plofile" src="img/logo.svg"/>
             </a>
             </h1>
-            <ul class="p-header__nav">
+            <ul class="l-header__nav p-header__nav">
                 <li class="c-fade-hov"><a href="#l-about__ttl">About</a></li>
                 <li class="c-fade-hov"><a href="#l-bicycle__ttl">Bicycle</a></li>
             </ul>
@@ -93,7 +93,7 @@
         <div class="js-about-wrap c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
             <p class="l-about__ttl c-ttl l-cntr" id="l-about__ttl">About</p>
             <div class="l-about__card l-cntr">
-                <div class="u-about__card_inner js-parallax c-pattern2 js-ctWrap c-anime_wrap">
+                <div class="p-about__card_inner js-parallax c-pattern2 js-ctWrap c-anime_wrap">
                     <img class="l-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
                     <div class="l-about__txtCard u-txt-L">
                         <h2 class="l-about__txt c-ttl-sm">KAKERU MIYAICHI</h2>
@@ -111,27 +111,33 @@
         <div class="c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
             <p class="l-bicycle__ttl c-ttl l-cntr" id="l-bicycle__ttl">Bicycle</p>
             <ul class="l-bicycle__box">
-                <div class="u-bicycle__box_inner js-parallax" data-offset="150">
-                    <li class="l-bicycle__card " href="bicycle/bicycle1.html">
-                        <div class="l-bicycle__img-wrap">
-                            <img class="l-bicycle__card__img"  alt="" src="img/bicycle1.jpg"/>
-                            <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル<br></h2>
-                            <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
-                        </div>
+                <div class="p-bicycle__box_inner js-parallax" data-offset="150">
+                    <li class="l-bicycle__card">
+                        <a class="l-bicycle__card__link" href="bicycle/bicycle1.html">
+                            <div class="l-bicycle__img-wrap">
+                                <img class="l-bicycle__card__img"  alt="" src="img/bicycle1.jpg"/>
+                                <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル<br></h2>
+                                <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>   
+                            </div>
+                        </a> 
                     </li>
-                    <li class="l-bicycle__card" href="bicycle/bicycle2.html">
-                        <div class="l-bicycle__img-wrap">
-                            <img class="l-bicycle__card__img" alt="" src="img/bicycle2.jpg"/>
-                            <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
-                            <p class="l-bicycle__txt c-txt">テキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                        </div>
+                    <li class="l-bicycle__card">
+                        <a class="l-bicycle__card__link" href="bicycle/bicycle2.html">
+                            <div class="l-bicycle__img-wrap">
+                                <img class="l-bicycle__card__img" alt="" src="img/bicycle2.jpg"/>
+                                <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
+                                <p class="l-bicycle__txt c-txt">テキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            </div>
+                        </a>
                     </li>
-                    <li class="l-bicycle__card" href="bicycle/bicycle3.html">
-                        <div class="l-bicycle__img-wrap">
-                            <img class="l-bicycle__card__img"  alt="" src="img/bicycle3.jpg"/>
-                            <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
-                            <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
-                        </div>
+                    <li class="l-bicycle__card">
+                        <a class="l-bicycle__card__link" href="bicycle/bicycle3.html">
+                            <div class="l-bicycle__img-wrap">
+                                <img class="l-bicycle__card__img"  alt="" src="img/bicycle3.jpg"/>
+                                <h2 class="l-bicycle__ttl c-ttl-sm">タイトルタイトル</h2>
+                                <p class="l-bicycle__txt c-txt">テキストテキストテキスト</p>
+                            </div>
+                        </a>
                     </li>
                 </div>
             </ul>
