@@ -8,7 +8,6 @@ html{
     scroll-behavior: smooth;
 }
 
-
 .c-ttl{
     max-width: fit-content;/*ttlの下線幅を合わせるため*/
     /*中央寄せのクラスが干渉してるので、上下余白を個別指定（タイトル共通余白）*/

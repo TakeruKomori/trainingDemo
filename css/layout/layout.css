@@ -41,13 +41,13 @@
  }
 */
 .l-topView{
-    max-width: 12800px;
     height: 95vh;
     margin: 0 auto;
     overflow: hidden;
 }
 .l-topView__img{
     min-height: 600px;
+    height: 95vh;
     width: auto;
     object-fit: cover;
     
