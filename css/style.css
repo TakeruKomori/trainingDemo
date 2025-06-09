@@ -11,7 +11,6 @@
 
   body{/*aタグ指定しないと何故か効かない*/
     font-family: Arial, Helvetica, sans-serif;
-    
     font-size: 14.4px;
     line-height: 1.9rem; 
     list-style: none;
@@ -124,7 +123,7 @@ textarea:not([rows]) {
 }
 .l-bicycleView__img {
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .l-bicycle__cts{
@@ -264,7 +263,9 @@ textarea:not([rows]) {
         
     }
     .l-bicycle__img-wrap {
-        max-width: 340px;
+        /*max-width: 340px;*/
+       /*max-width: 552px;*/
+       /*overflow: hidden;*/
     }
 
     }
@@ -320,6 +321,32 @@ html{
   color: var(--color);
   transition:  0.3s ease;
 }
+/*ホバーアンダーライン*/
+.c-und-line {
+  position: relative;
+  display: inline-block; /* アンダーラインの範囲を文字列だけにする */
+}
+
+.c-und-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* アンダーラインの位置は必要に応じて調整 */
+  width: 100%;
+  height: 3px;/*線の太さ*/
+  background: var(--blk);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  opacity: 0.6;
+}
+
+.c-und-line:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
 /*ホバーハイライト用*/
 
   .hlt .c-txt,
@@ -366,21 +393,22 @@ html{
 
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓curtain.css↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
-
+.c-anime_wrap, .js-ctWrap, .c-pattern{
+  overflow: hidden;
+}
 .c-anime_wrap{
     position: relative;
-    /*overflow: hidden;*/
 }
 .c-pattern{
     position: relative; 
-    /*overflow: hidden;*/
+    
 }
 
 .c-pattern::before{
     display: inline-block; 
     content: '';
-    width: 100%;
-    height: 105%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     left: 0;
     top: 0;
@@ -388,6 +416,7 @@ html{
     transition: 0.5s 1.5s ease;
     transition-delay: 0.3s;
     z-index: 100;
+    clip-path: inset(0 0 0 0);
 }
 
 .c-pattern.is-show::before{
@@ -398,6 +427,7 @@ html{
     opacity: 0;
     transition: 1.5s ease-in-out;
     z-index: 1;
+    
 }
 .c-pattern.is-show img{
     opacity: 1;
@@ -444,6 +474,7 @@ html{
 }
 
 .p-submenu{
+    z-index: 100;
     opacity: 0;
     position: absolute;
     top: 30px;
@@ -451,14 +482,24 @@ html{
     z-index: 999;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     background-color: var(--color);
-    width: 100px;
+    width: auto;
     flex-direction: column;
-    box-shadow: 0 0 8px gray;;
+    box-shadow: 0 0 8px gray;
+    border-radius: 10px;
+    white-space: nowrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+}
+.-left{
+  left: -40px;
 }
 
 .p-submenu__li{
     padding: 15px 5px;
-   
+    margin: 0 10px;
+}
+.p-submenu .yaji{
+  transform: rotate(-90deg);
 }
 
 .p-prnt__submn{
@@ -468,11 +509,15 @@ html{
     visibility: visible;
     opacity: 1;
  }
+ .p-prnt__submn:hover  .yaji{
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease;
+ }
 
  .p-topView{
     height: 95vh;
     margin: 0 auto;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .p-topView__img{
     min-height: 600px;
@@ -539,6 +584,7 @@ html{
       }
     .p-about__txt{
         max-width: 340px;/*文字折り返しのため*/
+
     }
 
     .p-about__card_inner{
@@ -563,11 +609,20 @@ body{
 .-d-blc{
     display: block;
 }
-.-d-fix{
+.-d-flx{
     display: flex;
 }
 .-d-tbcl{
     display: table-cell;
+}
+.-d-ilfx{
+  display: inline-flex;
+}
+.-flx-wp{
+  flex-wrap: wrap;
+}
+.-gap05{
+  gap: 0.5em;
 }
 .-m-top{
     margin-top: 1%;
@@ -584,5 +639,28 @@ body{
 
 @media screen and (max-width: 600px) {
     
+.-left{
+    left:-90px;
+}
 
 }
+/*txtanm*/
+/* 初期状態で下に隠す */
+.l-about .c-ttl span {
+  display: inline-block;
+  transform: translateY(100%);
+  transition: transform 2s cubic-bezier(0.7, 0.2, 0.1, 1);
+}
+
+/* is-activeクラスが付いたら上がってくる */
+.l-about.is-active .c-ttl span {
+  transform: translateY(0);
+}
+
+/* 遅延を1文字ずつつけたい場合 */
+.l-about.is-active .c-ttl span:nth-child(1) { transition-delay: 0.1s; }
+.l-about.is-active .c-ttl span:nth-child(2) { transition-delay: 0.14s; }
+.l-about.is-active .c-ttl span:nth-child(3) { transition-delay: 0.18s; }
+.l-about.is-active .c-ttl span:nth-child(4) { transition-delay: 0.2s; }
+.l-about.is-active .c-ttl span:nth-child(5) { transition-delay: 0.22s; }
+

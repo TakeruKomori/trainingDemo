@@ -71,5 +71,14 @@ $(window).on('scroll', function() {
     $('.js-scrlFade').css('opacity', opacity);
   });
   
+  const about = document.querySelector('.l-about');
+const onScroll = () => {
+  const rect = about.getBoundingClientRect();
+  if (rect.top < window.innerHeight * 0.5) {
+    about.classList.add('is-active');
+    window.removeEventListener('scroll', onScroll);
+  }
+};
+window.addEventListener('scroll', onScroll);
   
   

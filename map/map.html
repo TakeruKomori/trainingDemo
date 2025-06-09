@@ -66,18 +66,28 @@
         <!-- ↑構造化データ(Articleの場合)、ページによって異なります -->
 </head>
 <body class="l-boby ">
-    <header class="l-header">
-        <div class="p-header__inner c-anime_wrap js-ctWrap c-pattern"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
-            <div class="l-header__logo">
-            <a href="../index.html" class=" c-fade-hov">
-                <img class="p-header__logo" alt="plofile" src="../img/logo.svg"/>
-            </a>
-        </div>
-            <ul class="p-header__nav">
-                <li class="c-fade-hov"><a href="../index.html#l-about__ttl">About</a></li>
-                <li class="c-fade-hov"><a href="../index.html#l-bicycle__ttl">Bicycle</a></li>
-            </ul>
-        </div>
+    <header class="l-header l-conts">
+        <nav class="l-navgation p-header__inner c-anime_wrap js-ctWrap c-pattern -d-flx"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
+                <h1 class="l-header__logo">
+                <a href="../index.html" class=" c-fade-hov">
+                    <img class="l-header__logo p-header__logo" alt="plofile" src="../img/logo.svg"/>
+                </a>
+                </h1>
+                <ul class="l-header__nav p-header__nav -d-flx">
+                    <li class=" p-prnt__submn"><a class="-d-ilfx -gap05" href="../index.html#l-about__ttl">About<img class="" src="../img/dropD.svg"/></a>
+                        <ul class="l-submenu p-submenu -d-flx l-cntr">
+                            <li class="p-submenu__li c-txt"><a class="c-und-line -d-ilfx -gap05" href="../map/map.html">Access Map<img class="" src="../img/dropD.svg"/></a></li>
+                        </ul>
+                    </li>
+                    <li class=" p-prnt__submn"><a class="-d-ilfx -gap05" href="../index.#l-bicycle__ttl">Bicycle<img class="" src="../img/dropD.svg"/></a>
+                        <ul class="l-submenu p-submenu -d-flx l-cntr">
+                            <li class="p-submenu__li c-txt"><a class="c-und-line -d-ilfx -gap05" href="../bicycle/bicycle1.html">Bicycle model-1<img class="" src="../img/dropD.svg"/></a></li>
+                            <li class="p-submenu__li c-txt"><a class="c-und-line -d-ilfx -gap05" href="../bicycle/bicycle2.html">Bicycle model-2<img class="" src="../img/dropD.svg"/></a></li>
+                            <li class="p-submenu__li c-txt"><a class="c-und-line -d-ilfx -gap05" href="../bicycle/bicycle3.html">Bicycle model-3<img class="" src="../img/dropD.svg"/></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
     </header>
     <div class="l-map l__cts l-cntr -m-top-5">
         <div class="c-anime_wrap js-ctWrap c-pattern"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
@@ -87,7 +97,7 @@
         </div>
         <p class="l-map__adress l-cntr -m-top">〒162-0825 東京都新宿区神楽坂２丁目４</p>
         <button class="c-clr-bl-hov c-btn l-cntr -d-tbcl -m-top">
-            <a class="l-cntr -w-100 -d-flx" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.0097234854951!2d139.74106409608714!3d35.700660489135174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c5b3149bcb1%3A0x9c8f8b83417012d!2z44CSMTYyLTA4MjUg5p2x5Lqs6YO95paw5a6_5Yy656We5qW95Z2C77yS5LiB55uu77yUIOWFq-WztuODk-ODqw!5e0!3m2!1sja!2sjp!4v1749173451478!5m2!1sja!2sjp">
+            <a class="l-cntr -w-100" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.0097234854951!2d139.74106409608714!3d35.700660489135174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c5b3149bcb1%3A0x9c8f8b83417012d!2z44CSMTYyLTA4MjUg5p2x5Lqs6YO95paw5a6_5Yy656We5qW95Z2C77yS5LiB55uu77yUIOWFq-WztuODk-ODqw!5e0!3m2!1sja!2sjp!4v1749173451478!5m2!1sja!2sjp">
                 google Map
             </a>
         </button>
