@@ -31,13 +31,7 @@
         <meta name="msapplication-config" content="/images/common/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <!-- ↑使用するファビコン生成ツールによりコードは異なります。 -->
-        <link rel="stylesheet" type="text/css" media="all" href="./css/foundation/reset.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./css/foundation/foundation.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./css/layout/layout.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./css/object/component/component.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./css/object/component/curtain.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./css/object/project/project.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./css/object/utility/utility.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/style.css">
         
         <!-- ↓構造化データ(Articleの場合)、ページによって異なります。 -->
         <script type="application/ld+json">
@@ -71,33 +65,39 @@
         <!-- ↑構造化データ(Articleの場合)、ページによって異なります -->
 </head>
 <body class="l-boby c-body">
-    <header class="l-header">
-        <div class="p-header__inner c-anime_wrap js-ctWrap c-pattern"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
-            <h1 class="l-header__logo">
-            <a href="index.html" class=" c-fade-hov">
-                <img class="l-header__logo p-header__logo" alt="plofile" src="img/logo.svg"/>
-            </a>
-            </h1>
-            <ul class="l-header__nav p-header__nav">
-                <li class="c-fade-hov"><a href="#l-about__ttl">About</a></li>
-                <li class="c-fade-hov"><a href="#l-bicycle__ttl">Bicycle</a></li>
-            </ul>
-        </div>
+    <header class="l-header l-conts">
+        <nav class="l-navgation p-header__inner c-anime_wrap js-ctWrap c-pattern -d-flx"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
+                <h1 class="l-header__logo">
+                <a href="index.html" class=" c-fade-hov">
+                    <img class="l-header__logo p-header__logo" alt="plofile" src="img/logo.svg"/>
+                </a>
+                </h1>
+                <ul class="l-header__nav p-header__nav -d-flx">
+                    <li class=" p-prnt__submn"><a class="" href="#l-about__ttl">About</a>
+                        <ul class="l-submenu p-submenu -d-flx">
+                            
+                            <li class="p-submenu__li c-txt"><a href="../map/map.html">Access Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="c-fade-hov"><a href="#l-bicycle__ttl">Bicycle</a></li>
+                </ul>
+            </nav>
     </header>
-    <div class="l-topView l-cntr">
-        <div class="c-anime_wrap c-pattern js-ctWrap js-scrlFade"><!---カーテン,scrlFade用-->
-        <img class="l-topView__img" alt="実習サイト" src="img/mainvisual.jpg"/>
+    <div class="l-topView p-topView l-cntr  -m-btm-80px">
+        <div class=" c-anime_wrap c-pattern js-ctWrap js-scrlFade"><!---カーテン,scrlFade用-->
+        <img class="l-topView__img p-topView__img l-cntr -w-100 -d-blc" alt="" src="img/mainvisual.jpg"/>
         </div>
     </div>
-    <div class="l-about l-cts">
+    <span class="l-conts -about -d-blc"></span>
+    <div class="l-about l-conts -m-btm-80px">
         <div class="js-about-wrap c-anime_wrap js-ctWrap c-pattern "><!---カーテン用-->
-            <p class="l-about__ttl c-ttl l-cntr" id="l-about__ttl">About</p>
-            <div class="l-about__card l-cntr">
+            <h2 class="l-about__ttl c-ttl l-cntr" id="l-about__ttl">About</h2>
+            <div class="l-about__card p-about__card l-cntr">
                 <div class="p-about__card_inner js-parallax c-pattern2 js-ctWrap c-anime_wrap">
-                    <img class="l-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
+                    <img class="l-about__img p-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
                     <div class="l-about__txtCard u-txt-L">
-                        <h2 class="l-about__txt c-ttl-sm">KAKERU MIYAICHI</h2>
-                        <p class="l-about__txt ">テキストテキストテキストテキストテキストテキストテキスト<br>
+                        <h2 class="l-about__txt p-about__txt c-ttl-sm">KAKERU MIYAICHI</h2>
+                        <p class="l-about__txt p-about__txt">テキストテキストテキストテキストテキストテキストテキスト<br>
                             テキストテキストテキストテキストテキストテキストテキスト<br>
                             テキストテキストテキストテキストテキストテキスト
                             テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
@@ -107,12 +107,12 @@
             </div>
         </div>
     </div>
-    <div class="l-bicycle l-cts">
+    <div class="l-bicycle l-cont ">
         <div class="c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
-            <p class="l-bicycle__ttl c-ttl l-cntr" id="l-bicycle__ttl">Bicycle</p>
-            <ul class="l-bicycle__box">
+            <h2 class="l-bicycle__ttl c-ttl l-cntr" id="l-bicycle__ttl">Bicycle</h2>
+            <ul class="l-bicycle__box l-grid">
                 <div class="p-bicycle__box_inner js-parallax" data-offset="150">
-                    <li class="l-bicycle__card">
+                    <li class="l-bicycle__card hlt">
                         <a class="l-bicycle__card__link" href="bicycle/bicycle1.html">
                             <div class="l-bicycle__img-wrap">
                                 <img class="l-bicycle__card__img c-fadein"  alt="" src="img/bicycle1.jpg"/>
@@ -121,7 +121,7 @@
                             </div>
                         </a> 
                     </li>
-                    <li class="l-bicycle__card">
+                    <li class="l-bicycle__card hlt">
                         <a class="l-bicycle__card__link" href="bicycle/bicycle2.html">
                             <div class="l-bicycle__img-wrap">
                                 <img class="l-bicycle__card__img" alt="" src="img/bicycle2.jpg"/>
@@ -130,7 +130,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="l-bicycle__card">
+                    <li class="l-bicycle__card hlt">
                         <a class="l-bicycle__card__link" href="bicycle/bicycle3.html">
                             <div class="l-bicycle__img-wrap">
                                 <img class="l-bicycle__card__img"  alt="" src="img/bicycle3.jpg"/>
@@ -143,16 +143,16 @@
             </ul>
         </div>
     </div>
+
+    
+
     <footer class="l-footer c-footer l-cntr">
-        <p class="l-footer__txt">&copy;2020 Profile</p>
+        <small class="l-footer__txt">&copy;2020 Profile</small>
     </footer>
     <!-- jQuery CDN（Google Hosted） -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/js/jquery-3.7.1.min.js"><\/script>')</script>
-    <script src="js/curtain.js"></script>
-    <script src="js/scrollFade.js"></script>
     <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
-    <script src="js/lenis.js"></script> 
-    
+    <script src="js/sctipt.js"></script>
 </body>
 </html>
