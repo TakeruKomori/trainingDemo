@@ -71,14 +71,42 @@ $(window).on('scroll', function() {
     $('.js-scrlFade').css('opacity', opacity);
   });
   
-  const about = document.querySelector('.l-about');
-const onScroll = () => {
-  const rect = about.getBoundingClientRect();
-  if (rect.top < window.innerHeight * 0.5) {
-    about.classList.add('is-active');
-    window.removeEventListener('scroll', onScroll);
+// 不透明度スクロール制御
+$(window).on('scroll', function () {
+  var scroll = $(window).scrollTop();
+  var fadeStart = 0;
+  var fadeUntil = 1000;
+  var opacity = 1;
+
+  if (scroll <= fadeStart) {
+    opacity = 1;
+  } else if (scroll <= fadeUntil) {
+    opacity = 1 - (scroll - fadeStart) / (fadeUntil - fadeStart);
+  } else {
+    opacity = 0;
   }
-};
-window.addEventListener('scroll', onScroll);
+
+  $('.js-scrlFade').css('opacity', opacity);
+});
+
+// タイトルアニメーション処理
+document.querySelectorAll('.c-ttl-anm').forEach((about) => {
+  const ttl = about.querySelector('.c-ttl');
+  const spans = ttl.querySelectorAll('span');
+
+  spans.forEach((span, index) => {
+    span.style.transitionDelay = `${0.1 + index * 0.04}s`;
+  });
+
+  const onScroll = () => {
+    const rect = about.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.5) {
+      about.classList.add('is-active');
+      window.removeEventListener('scroll', onScroll);
+    }
+  };
+  window.addEventListener('scroll', onScroll);
+});
+
   
   

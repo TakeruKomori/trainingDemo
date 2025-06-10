@@ -198,24 +198,35 @@ textarea:not([rows]) {
     max-width: var(--max-width);
     /*imgとコンテンツ幅の上限。*/
 }
-.l-bicycle__box{
-    display: flex;
-    /*flex-wrap: wrap; */
-    justify-content: center;
+.l-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    column-gap: 1%;
+    row-gap: 1rem;
 }
-.l-bicycle__card{
-    flex: 1 1 auto;  
+.l-bicycle__box{
+    /*display: flex;*/
+    /*flex-wrap: wrap; */
+    /*justify-content: center;*/
+    
+}
+.c-card{
+    /*flex: 1 1 auto;  */
     /*max-width: 263px;*/
-    width: 100%;
+    /*width: 100%;*/
     margin:0 0.5%;
     align-items: center;
+
 }
 .l-bicycle__img-wrap {
-    width: 100%;
-    align-items: center;
+    /*width: 100%;*/
+    /*align-items: center;*/
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
   }
-.l-bicycle__card__img{
+.c-card__img{
     width: 100%;
     height: auto;
     display: block;
@@ -258,7 +269,7 @@ textarea:not([rows]) {
        padding: 0 15px;  
     }
 
-    .l-bicycle__card{
+    .c-card{
         margin-bottom: 1.5em;
         
     }
@@ -380,8 +391,8 @@ html{
     }
 
   @media screen and (max-width: 600px) {
-    .l-bicycle__card .c-txt,
-    .l-bicycle__card .c-ttl-sm {
+    .c-card .c-txt,
+    .c-card .c-ttl-sm {
       display: inline-block;
     } 
     .l-bicycle__img-wrap {
@@ -555,7 +566,7 @@ html{
     align-items: center;
 }
 .p-bicycle__box_inner{
-    display: flex;
+    /*display: flex;*/
     /*flex-wrap: wrap; */
     justify-content: center;
 }
@@ -630,11 +641,18 @@ body{
 .-m-top-5{
     margin-top: 5%;
 }
+.-m-lr4{
+  margin-left: 4%;
+  margin-right: 4%;
+}
 .-m-btm-80px{
     margin-bottom: 80px!important;
 }
 .-w-100{
     width: 100%;
+}
+.-b-sdw{
+  box-shadow: 0 0 10px rgb(235, 235, 235);
 }
 
 @media screen and (max-width: 600px) {
@@ -649,21 +667,15 @@ body{
 .c-ttl{
   overflow: hidden;
 }
-.l-about .c-ttl span {
+/* 通常状態：下に隠れてる */
+.c-ttl span {
   display: inline-block;
   transform: translateY(100%);
   transition: transform 1s cubic-bezier(0.7, 0.2, 0.1, 1);
 }
 
-/* is-activeクラスが付いたら上がってくる */
-.l-about.is-active .c-ttl span {
+/* .c-ttl-anm に .is-active がついたとき上がる */
+.c-ttl-anm.is-active .c-ttl span {
   transform: translateY(0);
 }
-
-/* 遅延を1文字ずつつけたい場合 */
-.l-about.is-active .c-ttl span:nth-child(1) { transition-delay: 0.1s; }
-.l-about.is-active .c-ttl span:nth-child(2) { transition-delay: 0.14s; }
-.l-about.is-active .c-ttl span:nth-child(3) { transition-delay: 0.18s; }
-.l-about.is-active .c-ttl span:nth-child(4) { transition-delay: 0.2s; }
-.l-about.is-active .c-ttl span:nth-child(5) { transition-delay: 0.22s; }
 
