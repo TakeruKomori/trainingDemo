@@ -607,6 +607,11 @@ html{
         flex-direction: column;   
     }
 }
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓contact.php↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+
+
+
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓utility.css↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 body{
@@ -616,6 +621,10 @@ body{
 }
 .u-txt-L{
     text-align: left!important;
+}
+.-flx-clm{
+  display: flex;
+  flex-direction: column;
 }
 .-d-blc{
     display: block;
