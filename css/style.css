@@ -74,7 +74,7 @@ button, input, label {
 }
 
 /* Balance text wrapping on headings */
-h1, h2,
+h1, /*h2,*/
 h3, h4 {
   text-wrap: balance;
 }
@@ -298,22 +298,25 @@ html{
   background-color: var(--blk);
   border: none;
   border-radius: 100px;
+  display: flex;
+  align-items: center;
 }
 .c-btn > a{
   margin: 2%;
   color: var(--color);
   text-align: center;
-  align-items: center;
 }
 
 .c-ttl{
-    max-width: fit-content;/*ttlの下線幅を合わせるため*/
-    /*中央寄せのクラスが干渉してるので、上下余白を個別指定（タイトル共通余白）*/
+    max-width: 20ch;/*ttlの下線幅を合わせるため*/
+    width: fit-content;
     font-size: 32px;
     border-bottom: solid 1px;
     font-weight: bold;
     margin-bottom: 5%;
   }
+  
+  
 .c-ttl_pages{
     max-width: fit-content;
     margin:1rem 0;
@@ -361,7 +364,7 @@ html{
 /*ホバーハイライト用*/
 
   .hlt .c-txt,
-  .hlt .c-ttl-sm {
+  .hlt .c-ttl-sm ,.hlt{
     display:inline-block;
     background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
     background-size: 0% 100%;
@@ -536,6 +539,16 @@ html{
     width: auto;
     object-fit: cover; 
     z-index: -10;
+    
+}
+
+.p-copy{
+  position: absolute;
+  font-size: 60px;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
 }
 
 .p-about__img{
@@ -580,6 +593,40 @@ html{
     justify-content: center;
     align-items: center;
     margin: 0;
+}
+.p-form{
+  width: 100%;
+  text-align: start;
+  gap: 25px;
+}
+.p-lb-waku{
+  width: 300px;
+  min-height: 30px;
+  height: fit-content;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  padding:1em 1.5em;
+}
+.p-lb-card{
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+.p-textarea-wrap {
+  position: relative;
+  display: inline-block;
+}
+.p-textarea-wrap textarea {
+  padding-left: 1.5em; /* 左に余白を確保（※の分） */
+}
+.p-required {
+  position: absolute;
+  top: 0.7em;
+  left: 8px;
+  color: red;
+  pointer-events: none; /* クリック無効にしておく */
+  opacity: 0.5;
 }
 
 
@@ -662,6 +709,12 @@ body{
 }
 .-b-sdw{
   box-shadow: 0 0 10px rgb(235, 235, 235);
+}
+.-red{
+  color: red;
+}
+.ttf{
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 600px) {

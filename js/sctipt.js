@@ -1,14 +1,15 @@
 //curtain.js
 function checkAnimeTrigger() {
+  if ($(".js-ctWrap").length > 0) {//.js-ctWrapがなければ発火させない
     $(".js-ctWrap").each(function () {
-      var offset  = $(this).offset().top;
-      var scroll  = $(window).scrollTop();
-      var wHeight = $(window).height();
+      let offset  = $(this).offset().top;//varとletの違い🔍
+      let scroll  = $(window).scrollTop();
+      let wHeight = $(window).height();
   
       if (scroll > offset - wHeight + wHeight / 2) {
         $(this).addClass("is-show");
       }
-    });
+    });}
   }
   
   // スクロール時に実行
@@ -55,10 +56,10 @@ const lenis = new Lenis({
   //scrollFade.js
 
 $(window).on('scroll', function() {
-    var scroll = $(window).scrollTop();
-    var fadeStart = 0;      // フェード開始位置
-    var fadeUntil = 1000;    // 完全に消える位置
-    var opacity = 1;
+    let scroll = $(window).scrollTop();
+    let fadeStart = 0;      // フェード開始位置
+    let fadeUntil = 1000;    // 完全に消える位置
+    let opacity = 1;
   
     if (scroll <= fadeStart) {
       opacity = 1;
@@ -73,10 +74,10 @@ $(window).on('scroll', function() {
   
 // 不透明度スクロール制御
 $(window).on('scroll', function () {
-  var scroll = $(window).scrollTop();
-  var fadeStart = 0;
-  var fadeUntil = 1000;
-  var opacity = 1;
+  let scroll = $(window).scrollTop();
+  let fadeStart = 0;
+  let fadeUntil = 1000;
+  let opacity = 1;
 
   if (scroll <= fadeStart) {
     opacity = 1;
@@ -108,5 +109,4 @@ document.querySelectorAll('.c-ttl-anm').forEach((about) => {
   window.addEventListener('scroll', onScroll);
 });
 
-  
   

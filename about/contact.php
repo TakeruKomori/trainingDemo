@@ -110,11 +110,27 @@
         <h1 class="l-map__ttl l-cntr c-ttl" alt="Acess Map"> Contact</h1>
         <!-- contact.php の例 -->
         <?php if ($mode === "input"): ?>
-        <form method="post" action="">
-            <label class="-flx-clm">お名前<input type="text" name="fullname" value="<?php echo isset($_SESSION['fullname']) ? htmlspecialchars($_SESSION['fullname']) : ''; ?>"></label><br>
-            <label>e-mail<input type="email" name="email" value="<?php echo isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : ''; ?>"></label><br>
-            <label>お問い合わせ<textarea name="message"><?php echo isset($_SESSION['message']) ? htmlspecialchars($_SESSION['message']) : ''; ?></textarea></label><br>
-            <input type="submit" name="confirm" value="確認">
+        <form class="p-form -flx-clm" method="post" action="">
+            
+            <div class="p-lb-card">
+                <div class="p-textarea-wrap">
+                <span class="p-required -red">※</span>
+                <label class=""><input class="p-lb-waku -b-sdw" placeholder="お名前" type="text" name="fullname" value="<?php echo isset($_SESSION['fullname']) ? htmlspecialchars($_SESSION['fullname']) : ''; ?>"></label><br>
+                </div>    
+            </div>
+            <div class="p-lb-card">
+                <div class="p-textarea-wrap">
+                <span class="p-required -red">※</span>
+                <label><input required class="p-lb-waku -b-sdw" placeholder="e-mail"  type="email" name="email" value="<?php echo isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : ''; ?>"></label><br>
+                </div>    
+            </div>
+            <div class="p-lb-card">
+                <div class="p-textarea-wrap">
+                <span class="-red p-required">※</span>
+                 <label><textarea class="p-lb-waku -b-sdw" placeholder="お問い合わせ内容" name="message"><?php echo isset($_SESSION['message']) ? htmlspecialchars($_SESSION['message']) : ''; ?></textarea></label><br>
+                </div>    
+            </div>
+            <input class="p-lb-waku" type="submit" name="confirm" value="ご登録内容の確認">
         </form>
 
         <?php elseif ($mode === "confirm"): ?>
