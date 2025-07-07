@@ -25,52 +25,49 @@ function checkAnimeTrigger() {
   
   //lenis.js
 
-const lenis = new Lenis({
-    duration: 2.2,
-    easing: (t) => Math.min(1, 1.01 - Math.pow(2, -6 * t)),
+//const lenis = new Lenis({
+//    duration: 2.2,
+//    easing: (t) => Math.min(1, 1.01 - Math.pow(2, -6 * t)),
   // スムースな加速・減速
-    smooth: true,
-  });
+ //   smooth: true,
+ // });
   
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
+ // function raf(time) {
+  //  lenis.raf(time);
+ //   requestAnimationFrame(raf);
+ // }
   
-  requestAnimationFrame(raf);
+ // requestAnimationFrame(raf);
   
-  lenis.on("scroll", () => {
-    const elements = document.querySelectorAll('.js-parallax');
-    const windowHeight = window.innerHeight;
+  //lenis.on("scroll", () => {
+  //  const elements = document.querySelectorAll('.js-parallax');
+  //  const windowHeight = window.innerHeight;
   
-    elements.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const ratio = rect.top / windowHeight;
-        const offset = ratio * 30;
-        el.style.transform = `translateY(${offset}px)`;
-      }
-    });
+  //  elements.forEach(el => {
+  //    const rect = el.getBoundingClientRect();
+  //    if (rect.top < windowHeight && rect.bottom > 0) {
+  //      const ratio = rect.top / windowHeight;
+  //      const offset = ratio * 30;
+  //      el.style.transform = `translateY(${offset}px)`;
+  //    }
+  //  });
   
-  });
+ // });
   //scrollFade.js
 
-$(window).on('scroll', function() {
-    let scroll = $(window).scrollTop();
-    let fadeStart = 0;      // フェード開始位置
-    let fadeUntil = 1000;    // 完全に消える位置
-    let opacity = 1;
-  
-    if (scroll <= fadeStart) {
-      opacity = 1;
-    } else if (scroll <= fadeUntil) {
-      opacity = 1 - (scroll - fadeStart) / (fadeUntil - fadeStart);
-    } else {
-      opacity = 0;
-    }
-  
-    $('.js-scrlFade').css('opacity', opacity);
-  });
+// Lenis
+const lenis = new Lenis({
+  smooth: true
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// ScrollTrigger に同期させる
+lenis.on('scroll', ScrollTrigger.update);
   
 // 不透明度スクロール制御
 $(window).on('scroll', function () {
@@ -79,12 +76,16 @@ $(window).on('scroll', function () {
   let fadeUntil = 1000;
   let opacity = 1;
 
+  const minOpacity = 0.2;
+
   if (scroll <= fadeStart) {
     opacity = 1;
   } else if (scroll <= fadeUntil) {
-    opacity = 1 - (scroll - fadeStart) / (fadeUntil - fadeStart);
+    // 1 から 0 へ徐々に下がるが、minOpacity を下限に設定
+    const rawOpacity = 1 - (scroll - fadeStart) / (fadeUntil - fadeStart);
+    opacity = Math.max(minOpacity, rawOpacity);
   } else {
-    opacity = 0;
+    opacity = minOpacity;
   }
 
   $('.js-scrlFade').css('opacity', opacity);
@@ -109,4 +110,17 @@ document.querySelectorAll('.c-ttl-anm').forEach((about) => {
   window.addEventListener('scroll', onScroll);
 });
 
-  
+  // ScrollTriggerを使う準備
+gsap.registerPlugin(ScrollTrigger);
+
+// 各セクションをスクロールに合わせて固定表示させる
+gsap.utils.toArray(".panel").forEach((panel) => {
+  ScrollTrigger.create({
+    trigger: ".panel1",
+    start: "top 20%",
+    end: () => "+=" + (window.innerHeight * 1.5),
+    pin: true,
+    pinSpacing: true, // セクション間の空白を作らない
+    scrub: true, // trueにするとスクロール連動アニメになる（今はfalseでOK）
+  });
+});

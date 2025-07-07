@@ -64,52 +64,54 @@
         </script>
         <!-- ↑構造化データ(Articleの場合)、ページによって異なります -->
 </head>
-<body class="l-boby c-body">
-    <header class="l-header l-conts">
-        <nav class="l-navgation p-header__inner -d-flx"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
-                <h1 class="l-header__logo">
-                <a href="../index.html" class=" c-fade-hov">
-                    <img class="l-header__logo p-header__logo" alt="plofile" src="../img/logo.svg"/>
-                </a>
-                </h1>
-                <ul class="l-header__nav p-header__nav -d-flx">
-                    <li class=" p-prnt__submn"><a class="-d-ilfx -gap05" href="../index.html#l-about__ttl">About<img class="yaji" src="../img/dropD.svg"/></a>
-                        <ul class="l-submenu p-submenu -d-flx l-cntr">
-                            <li class="p-submenu__li c-txt"><a class="c-und-line -d-ilfx -gap05" href="../about/map.html">Access Map<img class="" src="../img/dropD.svg"/></a></li>
-                            <li class="p-submenu__li c-txt"><a class="c-und-line -d-ilfx -gap05" href="../about/contact.php">Contact<img class="" src="../img/dropD.svg"/></a></li>
-                        </ul>
-                    </li>
-                    <li class=" p-prnt__submn"><a class="-d-ilfx -gap05" href="../index.html#l-bicycle__ttl">Bicycle<img class="yaji" src="../img/dropD.svg"/></a>
-                        <ul class="l-submenu p-submenu  l-cntr -left">
-                            <li class="p-submenu__li c-txt">
-                                <a class="c-und-line -d-blc -gap05" href="../bicycle/bicycle1.html"><img class="c-card__img c-fadein"  alt="" src="img/bicycle1.jpg"/><span class="-d-flx">Bicycle model-1<img class="yaji" src="../img/dropD.svg"/></span></a>
-                            </li>
-                            <li class="p-submenu__li c-txt">
-                                <a class="c-und-line -d-blc -gap05" href="../bicycle/bicycle2.html"><img class="c-card__img c-fadein"  alt="" src="img/bicycle1.jpg"/><span class="-d-flx">Bicycle model-2<img class="yaji" src="../img/dropD.svg"/></span></a>
-                            </li>
-                            <li class="p-submenu__li c-txt">
-                                <a class="c-und-line -d-blc -gap05" href="../bicycle/bicycle3.html"><img class="c-card__img c-fadein"  alt="" src="img/bicycle1.jpg"/><span class="-d-flx">Bicycle model-3<img class="yaji" src="../img/dropD.svg"/></span></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-    </header>
-    <div class="l-topView p-topView l-cntr  -m-btm-80px">
-        <div class=" c-anime_wrap c-pattern js-ctWrap js-scrlFade"><!---カーテン,scrlFade用-->
-        <!--練習
-        <p class="l-topView__copy p-copy hlt">"Somewhere begins<br>with a bicycle."</p>
--->
-        <img class="l-topView__img p-topView__img l-cntr -w-100 -d-blc" alt="" src="img/mainvisual.jpg"/>
+<body class="l-boby c-body panels">
+    <div class="l-topView p-topView l-cntr -m-btm-80px">
+<!-------------------------header--------------------------->
+        <header class="l-header l-conts">
+            <nav class="l-navgation p-header__inner -d-flx"><!---カーテン用、親のdisplayが効かなくなるのでインナー配置-->
+                    <h1 class="l-header__logo">
+                    <a href="../index.html" class=" c-fade-hov">
+                        <img class="l-header__logo p-header__logo" alt="plofile" src="./img/logo.svg"/>
+                    </a>
+                    </h1>
+                    <ul class="l-header__nav p-header__nav -d-flx">
+                        <li class=" p-prnt__submn"><a class="-d-ilfx -gap05" href="../index.html#l-about__ttl">About<img class="yaji" src="./img/dropD.svg"/></a>
+                            <ul class="l-submenu p-submenu -d-flx l-cntr">
+                                <li class="p-submenu__li c-txt"><a class="c-und-line -d-ilfx -gap05" href="../about/map.html">Access Map<img class="" src="./img/dropD.svg"/></a></li>
+                                <li class="p-submenu__li c-txt"><a class="c-und-line -d-ilfx -gap05" href="../about/contact.php">Contact<img class="" src="./img/dropD.svg"/></a></li>
+                            </ul>
+                        </li>
+                        <li class=" p-prnt__submn"><a class="-d-ilfx -gap05" href="../index.html#l-bicycle__ttl">Bicycle<img class="yaji" src="./img/dropD.svg"/></a>
+                            <ul class="l-submenu p-submenu  l-cntr -left">
+                                <li class="p-submenu__li c-txt">
+                                    <a class="c-und-line -d-blc -gap05" href="../bicycle/bicycle1.html"><img class="c-card__img c-fadein"  alt="" src="img/bicycle1.jpg"/><span class="-d-flx">Bicycle model-1<img class="yaji" src="./img/dropD.svg"/></span></a>
+                                </li>
+                                <li class="p-submenu__li c-txt">
+                                    <a class="c-und-line -d-blc -gap05" href="../bicycle/bicycle2.html"><img class="c-card__img c-fadein"  alt="" src="img/bicycle1.jpg"/><span class="-d-flx">Bicycle model-2<img class="yaji" src="./img/dropD.svg"/></span></a>
+                                </li>
+                                <li class="p-submenu__li c-txt">
+                                    <a class="c-und-line -d-blc -gap05" href="../bicycle/bicycle3.html"><img class="c-card__img c-fadein"  alt="" src="img/bicycle1.jpg"/><span class="-d-flx">Bicycle model-3<img class="yaji" src="./img/dropD.svg"/></span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
+<!-------------------------ここまで-------------------------->
+        <div class="js-scrlFade"><!---カーテン,scrlFade用-->
+       
+        <img class="l-topView__copy  p-copy hlt" src="img/top-copy.png">
+
+        <video class="l-topView__img p-topView__img l-cntr -w-100 -d-blc" src="mov/mainvisual.mov" autoplay loop muted playsinline></video>
         </div>
     </div>
     <span class="l-conts -about -d-blc"></span>
-    <div class="l-about l-conts c-ttl-anm -m-btm-80px">
-        <div class="js-about-wrap c-anime_wrap js-ctWrap c-pattern "><!---カーテン用-->
+    <div class="l-about l-conts c-ttl-anm -m-btm-80px panel panel1">
+        <div class=""><!---カーテン用-->
             <h2 class="l-about__ttl c-ttl l-cntr" id="l-about__ttl" alt="About"><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span></h2>
             <div class="l-about__card p-about__card l-cntr">
-                <div class="p-about__card_inner js-parallax c-pattern2 js-ctWrap c-anime_wrap">
-                    <img class="l-about__img p-about__img" alt="KAKERU MIYAICHI" src="img/about.jpg"/>
+                <div class="p-about__card_inner js-parallax">
+                    <img class="l-about__img p-about__img" alt="KAKERU MIYAICHI" src="./img/about.jpg"/>
                     <div class="l-about__txtCard u-txt-L">
                         <h2 class="l-about__txt p-about__txt c-ttl-sm ttf">kakeru miyaichi</h2>
                         <p class="l-about__txt p-about__txt">テキストテキストテキストテキストテキストテキストテキスト<br>
@@ -123,7 +125,7 @@
         </div>
     </div>
     <div class="l-bicycle l-conts c-ttl-anm">
-        <div class="c-anime_wrap js-ctWrap c-pattern"><!---カーテン用-->
+        <div class=""><!---カーテン用-->
             <h2 class="l-bicycle__ttl c-ttl l-cntr" id="l-bicycle__ttl"><span>B</span><span>i</span><span>c</span><span>y</span><span>c</span><span>l</span><span>e</span></h2>
             <div class="l-bicycle__box">
                 <ul class=" l-grid p-bicycle__box_inner js-parallax -m-lr4" data-offset="150"><!---グリッド--->
@@ -185,7 +187,12 @@
     <!-- jQuery CDN（Google Hosted） -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/js/jquery-3.7.1.min.js"><\/script>')</script>
+    <!-- GSAP 本体 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- ScrollTrigger プラグイン -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
     <script src="js/sctipt.js"></script>
+
 </body>
 </html>
