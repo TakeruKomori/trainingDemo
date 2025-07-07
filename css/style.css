@@ -171,7 +171,7 @@ textarea:not([rows]) {
 
 .l-header {
   position: fixed;
-  
+  width: 100vw;
   margin: 0 auto;
   padding: 0 15%;
   z-index: 1000;
@@ -326,6 +326,7 @@ html{
     border-bottom: solid 2px;
     font-weight: bold;
     margin-bottom: 5%;
+    z-index: 2;
   }
   
   
@@ -420,7 +421,7 @@ html{
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓curtain.css↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 .c-anime_wrap, .js-ctWrap, .c-pattern{
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 .c-anime_wrap{
     position: relative;
@@ -496,7 +497,7 @@ html{
 .p-header__nav{
     display: flex;/*modの-d-flxが効きません*/
     z-index: 2;
-    gap: 0 30px;
+    gap: 0 80px;
     font-weight: bold;
 }
 
@@ -527,6 +528,7 @@ html{
 }
 .p-submenu .yaji{
   transform: rotate(-90deg);
+  
 }
 
 .p-prnt__submn{
@@ -550,7 +552,9 @@ html{
 .p-topView__img{
     min-height: 600px;
     height: 100vh;
-    width: auto;
+    width: 100vw;
+    text-align: center;
+    margin: 0 auto;
     object-fit: cover; 
     position: fixed;
     top: 0;
@@ -562,6 +566,7 @@ html{
 .p-copy{
   position: fixed;
   width: 70%;
+  max-width: 700px;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -587,6 +592,7 @@ html{
 .p-about__txt{
     max-width: 400px;/*文字折り返しのため*/
     margin: 0 auto;
+    text-align: start;
 }
 
 
@@ -599,8 +605,13 @@ html{
 .p-bicycle__box_inner{
     /*display: flex;*/
     /*flex-wrap: wrap; */
+    flex-direction: column;   
     justify-content: center;
     opacity: 1;
+}
+.p-scrollable-content{
+    height: 100vh;
+    overflow-y: auto; 
 }
 .p-map{
     height: 70vh;
@@ -669,10 +680,6 @@ html{
         margin: auto 1rem;
     }
 
-    .p-bicycle__box_inner{
-        flex-direction: column;   
-    }
-}
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓contact.php↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 
@@ -697,6 +704,9 @@ body{
 }
 .-d-flx{
     display: flex;
+}
+.-d-il{
+  display: inline;
 }
 .-d-tbcl{
     display: table-cell;
@@ -739,6 +749,10 @@ body{
   height: 100vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
+}
+.panel[style] .p-scrollable-content {
+  height: 100vh !important;
 }
 
 @media screen and (max-width: 600px) {

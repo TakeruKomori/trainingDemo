@@ -116,11 +116,12 @@ gsap.registerPlugin(ScrollTrigger);
 // 各セクションをスクロールに合わせて固定表示させる
 gsap.utils.toArray(".panel").forEach((panel) => {
   ScrollTrigger.create({
-    trigger: ".panel1",
+    trigger: panel,
     start: "top 20%",
-    end: () => "+=" + (window.innerHeight * 1.5),
+    end: () => "+=" + window.innerHeight, 
     pin: true,
     pinSpacing: true, // セクション間の空白を作らない
-    scrub: true, // trueにするとスクロール連動アニメになる（今はfalseでOK）
+    scrub: false, // スクロール連動アニメ
+    markers:true,
   });
 });
