@@ -990,6 +990,7 @@ main {
 
 .item__svg {
 	position: relative;
+  left: 100px;
 	width: 50%;
 	height: auto;
 	min-height: 280px;
@@ -1005,6 +1006,7 @@ main {
 .item__meta {
 	position: absolute;
 	top: 0;
+  left: 100px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -1058,7 +1060,7 @@ main {
 
 /* Individual styles */
 .item--style-8 .item__deco {
-	fill: #404040;
+	fill:#515151/* #404040;*/;
 }
 
 
