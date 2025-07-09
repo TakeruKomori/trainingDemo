@@ -59,7 +59,7 @@ function checkAnimeTrigger() {
 const lenis = new Lenis({
   duration: 5.5,//重さ
   easing: (t) => Math.min(1, 1.01 - Math.pow(2, -6 * t)),
-  smooth: false,
+  smooth:true,
 });
 
 function raf(time) {
@@ -113,91 +113,141 @@ document.querySelectorAll('.c-ttl-anm').forEach((about) => {
   window.addEventListener('scroll', onScroll);
 });
 
- // GSAP ScrollTrigger登録
+// GSAP ScrollTrigger登録
 gsap.registerPlugin(ScrollTrigger);
 
-// anime.js で SVGをループアニメさせるクラス
-class LoopingSVG {
-	constructor(el) {
-		this.el = el;
-		this.path = el.querySelector(".item__clippath");
-		this.paths = {
-			start: this.path.getAttribute("d"),
-			end: el.dataset.morphPath
-		};
-		this.animatePath();
-	}
-
-	animatePath() {
-		anime({
-			targets: this.path,
-			d: [
-				{ value: this.paths.end },
-				{ value: this.paths.start }
-			],
-			duration: 8000,
-			easing: "easeInOutQuad",
-			loop: true,
-			direction: "alternate"
-		});
-	}
-}
-
-// DOM準備が整ったらすべて初期化
 document.addEventListener("DOMContentLoaded", () => {
-	// SVGループアニメ開始
+	// SVGループアニメ
+	class LoopingSVG {
+		constructor(el) {
+			this.el = el;
+			this.path = el.querySelector(".item__clippath");
+			this.paths = {
+				start: this.path.getAttribute("d"),
+				end: el.dataset.morphPath
+			};
+			this.animatePath();
+		}
+
+		animatePath() {
+			anime({
+				targets: this.path,
+				d: [
+					{ value: this.paths.end },
+					{ value: this.paths.start }
+				],
+				duration: 8000,
+				easing: "easeInOutQuad",
+				loop: true,
+				direction: "alternate"
+			});
+		}
+	}
+
 	document.querySelectorAll(".item").forEach(item => new LoopingSVG(item));
 
-	// 各セクションを固定表示（縦スクロール中）
-	gsap.utils.toArray(".panel").forEach((panel) => {
-		ScrollTrigger.create({
-			trigger: panel,
-			start: "top 20%",
-			end: "bottom top",
-			pin: true,
-			pinSpacing: true,
-			scrub: false
+	// 横スクロール（.l-gal）
+	const img = document.querySelector('.l-galwp img');
+	img.onload = () => {
+		const scrollLength = img.scrollWidth - window.innerWidth;
+
+		gsap.to(".l-galwp", {
+			x: -scrollLength,
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".l-gal",
+				start: "top top",
+				end: () => "+=" + scrollLength,
+				scrub: true,
+				pin: true,
+				anticipatePin: 1,
+				//markers: true,
+			}
 		});
+
+		// 画像読み込み後に ScrollTrigger を再評価
+		ScrollTrigger.refresh();
+	};
+
+	// 横スクロール（.p-scwrap）
+const wrap  = document.querySelector(".p-scwrap");
+const contents  = document.querySelector(".p-sconts");
+const items = document.querySelectorAll(".p-scitm");
+const num   = items.length;
+
+gsap.set(contents, { width: `${num * 100}%` });
+
+// 横スクロール開始を .l-gal のスクロール完了後に遅らせるため、画像ロード後にセット
+const galImg = document.querySelector('.l-galwp img');
+
+galImg.onload = () => {
+	const scrollLength = galImg.scrollWidth - window.innerWidth;
+
+	// l-gal の横スクロール
+	gsap.to(".l-galwp", {
+		x: -scrollLength,
+		ease: "none",
+		scrollTrigger: {
+			trigger: ".l-gal",
+			start: "top top",
+			end: () => "+=" + scrollLength,
+			scrub: true,
+			pin: true,
+			anticipatePin: 1,
+			//markers: true,
+		}
 	});
 
-	// 横スクロール
-	const wrap  = document.querySelector(".p-scwrap");
-	const contents  = document.querySelector(".p-sconts");
-	const items = document.querySelectorAll(".p-scitm");
-	const num   = items.length;
-
-	gsap.set(contents, { width: num * 100 + "%" });
-
+	// p-scwrap の横スクロール（発火を l-gal 完了後に）
 	gsap.to(items, {
 		xPercent: -100 * num,
 		ease: "none",
 		scrollTrigger: {
-			trigger: wrap,
-			start: "top 20%",
-			end: "bottom top",
-			pin: true,
-			scrub: true
+			trigger: ".p-scwrap",
+			start: "top-=20% top",
+			end: () => "+=" + window.innerWidth * (num - 1),
+			pin: ".p-scwrap",
+			scrub: true,
+			//markers: true,
 		}
 	});
-//SVG拡大アニメ
+
+	// 念のためリフレッシュ
+	ScrollTrigger.refresh();
+};
+
+
+	// パネル（ピン固定）調整：Aboutなど
+	gsap.utils.toArray(".panel").forEach((panel) => {
+		ScrollTrigger.create({
+			trigger: panel,
+			start: "top 10%", // 横スクロールと被らないよう調整
+			end: "bottom-=100 top",
+			pin: true,
+			pinSpacing: false,
+			scrub: false,
+			//markers:true,
+		});
+	});
+
+	// SVG拡大アニメ
 	gsap.to(".item__svg", {
 		scrollTrigger: {
-		  trigger: ".item",            // Aboutセクション全体など
-		  start: "top center",         // 開始位置
-		  end: "bottom center",        // 終了位置（ピンされてる間）
-		  scrub: true,                 // スクロール連動
-		  // markers: true,           // デバッグ用
+			trigger: ".item",
+			start: "top center",
+			end: "bottom center",
+			scrub: true,
+			// markers: true,
 		},
-		width: "100%",               // 変化させたい値
-		ease: "none"                   // スムーズに
-	  });
+		width: "100%",
+		ease: "none"
+	});
 
-	// テキストフェードイン（スクロール連動）
+	// テキストフェードイン
 	gsap.from(".item__title", {
 		scrollTrigger: {
 			trigger: ".item__title",
 			start: "top 80%",
-			//toggleActions: "play reverse play reverse"
 			toggleActions: "play none none none"
 		},
 		opacity: 0,
@@ -214,7 +264,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		opacity: 0,
 		y: 30,
 		duration: 1,
-		delay: 0,
+	});
+
+	// ScrollTriggerレイアウト再評価（念押し）
+	window.addEventListener("load", () => {
+		ScrollTrigger.refresh();
 	});
 });
-

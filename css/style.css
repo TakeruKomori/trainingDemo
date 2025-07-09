@@ -264,7 +264,21 @@ textarea:not([rows]) {
     text-align: center;
     width: 100%;
 }
-
+.l-gal{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.l-galwp{
+  height: 100vh;
+  width: max-content; /* 画像の幅に合わせて */
+  display: flex;
+}
+.l-gal image{
+  height: 100vh;
+  width: auto;
+  display: block;
+}
 
 /* ---以下レスポンシブ----------------------------------------------*/
 
@@ -596,7 +610,6 @@ html{
     text-align: start;
 }
 
-
 .p-about__card_inner{
     display: flex;             /* 横並びにする */      
     justify-content: center;
@@ -664,6 +677,7 @@ html{
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
+
 }
 .p-sconts{
   padding-left: 10%;
@@ -715,6 +729,9 @@ body{
 .-flx-clm{
   display: flex;
   flex-direction: column;
+}
+.-h-100vh{
+  height: 100vh;
 }
 .-d-blc{
     display: block;
