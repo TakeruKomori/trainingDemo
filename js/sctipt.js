@@ -271,3 +271,13 @@ galImg.onload = () => {
 		ScrollTrigger.refresh();
 	});
 });
+//hmbg
+document.addEventListener("DOMContentLoaded", () => {
+	const toggle = document.querySelector(".menu-toggle");
+	const nav = document.querySelector(".l-header__nav");
+  
+	toggle.addEventListener("click", () => {
+	  toggle.classList.toggle("open");
+	  nav.classList.toggle("open");
+	});
+  });
