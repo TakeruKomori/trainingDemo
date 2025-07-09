@@ -131,6 +131,7 @@ textarea:not([rows]) {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 4%;
+    padding-top: 60px; 
 }
 
 /* ---以下レスポンシブ----------------------------------------------*/
@@ -605,7 +606,7 @@ html{
     align-items: center;
 }
 .p-about__txt{
-    max-width: 400px;/*文字折り返しのため*/
+    max-width: 600px;/*文字折り返しのため*/
     margin: 0 auto;
     text-align: start;
 }

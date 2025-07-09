@@ -1,6 +1,6 @@
 /* ハンバーガーアイコンの見た目 */
 .menu-toggle {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
