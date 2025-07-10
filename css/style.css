@@ -682,7 +682,7 @@ html{
 }
 .p-sconts{
   padding-left: 10%;
- 
+  height: 100vh;
   width: max-content;  
 }
 .p-scitm{
