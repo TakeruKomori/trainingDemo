@@ -22,18 +22,6 @@ function checkAnimeTrigger() {
   $(window).on('load', function () {
     checkAnimeTrigger();
   });
-
-  //ハンバーガーメニュー
-document.addEventListener("DOMContentLoaded", () => {
-	const toggle = document.querySelector(".menu-toggle");
-	const nav = document.querySelector(".l-header__nav");
-  
-	toggle.addEventListener("click", () => {
-	  toggle.classList.toggle("open");
-	  nav.classList.toggle("open");
-	});
-  });
-
   
   //lenis.js
 
@@ -158,66 +146,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	document.querySelectorAll(".item").forEach(item => new LoopingSVG(item));
 
-	document.addEventListener("DOMContentLoaded", () => {
-		const galImg = document.querySelector('.l-galwp img');
-		const items = document.querySelectorAll(".p-scitm");
-		const num = items.length;
-	  
-		// 横スクロール幅を先にセット
-		gsap.set(".p-sconts", { width: `${num * 100}%` });
-	  
-		galImg.onload = () => {
-		  const galScrollLength = galImg.scrollWidth - window.innerWidth;
-	  
-		  // GAL 横スクロール
-		  ScrollTrigger.create({
+	// 横スクロール（.l-gal）
+	const img = document.querySelector('.l-galwp img');
+	img.onload = () => {
+		const scrollLength = img.scrollWidth - window.innerWidth;
+
+		gsap.to(".l-galwp", {
+			x: -scrollLength,
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".l-gal",
+				start: "top top",
+				end: () => "+=" + scrollLength,
+				scrub: true,
+				pin: true,
+				anticipatePin: 1,
+				//markers: true,
+			}
+		});
+
+		// 画像読み込み後に ScrollTrigger を再評価
+		ScrollTrigger.refresh();
+	};
+
+	// 横スクロール（.p-scwrap）
+const wrap  = document.querySelector(".p-scwrap");
+const contents  = document.querySelector(".p-sconts");
+const items = document.querySelectorAll(".p-scitm");
+const num   = items.length;
+
+gsap.set(contents, { width: `${num * 100}%` });
+
+// 横スクロール開始を .l-gal のスクロール完了後に遅らせるため、画像ロード後にセット
+const galImg = document.querySelector('.l-galwp img');
+
+galImg.onload = () => {
+	const scrollLength = galImg.scrollWidth - window.innerWidth;
+
+	// l-gal の横スクロール
+	gsap.to(".l-galwp", {
+		x: -scrollLength,
+		ease: "none",
+		scrollTrigger: {
 			trigger: ".l-gal",
 			start: "top top",
-			end: "+=" + galScrollLength,
+			end: () => "+=" + scrollLength,
 			scrub: true,
 			pin: true,
 			anticipatePin: 1,
-			onLeave: () => {
-			  setupBicycle(); // bicycle開始
-			}
-		  });
-	  
-		  ScrollTrigger.refresh();
-		};
-	  
-		function setupBicycle() {
-		  const totalScroll = window.innerWidth * (num - 1);
-	  
-		  // Bicycle 横スクロール
-		  ScrollTrigger.create({
+			//markers: true,
+		}
+	});
+
+	// p-scwrap の横スクロール（発火を l-gal 完了後に）
+	gsap.to(items, {
+		xPercent: -100 * num,
+		ease: "none",
+		scrollTrigger: {
 			trigger: ".p-scwrap",
-			start: "top top",
-			end: "+=" + totalScroll,
-			scrub: true,
+			start: "top-=20% top",
+			end: () => "+=" + window.innerWidth * (num - 1),
 			pin: ".p-scwrap",
-			anticipatePin: 1,
-			onLeave: () => {
-			  setupPanels(); // MAPなどpanel開始
-			}
-		  });
-	  
-		  ScrollTrigger.refresh();
+			scrub: true,
+			//markers: true,
 		}
-	  
-		function setupPanels() {
-		  gsap.utils.toArray(".panel").forEach((panel) => {
-			ScrollTrigger.create({
-			  trigger: panel,
-			  start: "top top",
-			  end: "bottom top",
-			  pin: true,
-			  pinSpacing: false,
-			});
-		  });
-	  
-		  ScrollTrigger.refresh();
-		}
-	  });
+	});
+
+	// 念のためリフレッシュ
+	ScrollTrigger.refresh();
+};
+
 
 	// パネル（ピン固定）調整：Aboutなど
 	gsap.utils.toArray(".panel").forEach((panel) => {
@@ -228,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			pin: true,
 			pinSpacing: false,
 			scrub: false,
-			markers:true,
+			//markers:true,
 		});
 	});
 
@@ -248,7 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	// テキストフェードイン
 	gsap.from(".item__title", {
 		scrollTrigger: {
-			scrollTrigger: {
 			trigger: ".item__title",
 			start: "top 80%",
 			toggleActions: "play none none none"
@@ -274,4 +271,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		ScrollTrigger.refresh();
 	});
 });
-
+//hmbg
+document.addEventListener("DOMContentLoaded", () => {
+	const toggle = document.querySelector(".menu-toggle");
+	const nav = document.querySelector(".l-header__nav");
+  
+	toggle.addEventListener("click", () => {
+	  toggle.classList.toggle("open");
+	  nav.classList.toggle("open");
+	});
+  });
