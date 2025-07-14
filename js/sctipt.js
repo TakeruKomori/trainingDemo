@@ -1,3 +1,16 @@
+//yomikomimati
+function yourFunction() {
+	// たとえば GSAP や Lenis の初期化など
+	console.log("全てのリソースが読み込まれました");
+	initLenis();
+	initScrollTrigger();
+	initCurtain();
+	initHamburger();
+  }
+  
+  window.onload = function () {
+	yourFunction();
+  };
 //curtain.js
 function checkAnimeTrigger() {
   if ($(".js-ctWrap").length > 0) {//.js-ctWrapがなければ発火させない
@@ -182,7 +195,7 @@ const galImg = document.querySelector('.l-galwp img');
 
 galImg.onload = () => {
 	const scrollLength = galImg.scrollWidth - window.innerWidth;
-
+	
 	// l-gal の横スクロール
 	gsap.to(".l-galwp", {
 		x: -scrollLength,
@@ -205,8 +218,9 @@ galImg.onload = () => {
 		scrollTrigger: {
 			trigger: ".p-scwrap",
 			start: "top-=20% top",
-			end: () => "+=" + window.innerWidth * (num - 1),
+			end: () => "+=" + document.querySelector(".p-sconts").offsetWidth,
 			pin: ".p-scwrap",
+			pinSpacing:true,
 			scrub: true,
 			//markers: true,
 		}
@@ -224,7 +238,7 @@ galImg.onload = () => {
 			start: "top 10%", // 横スクロールと被らないよう調整
 			end: "bottom-=100 top",
 			pin: true,
-			pinSpacing: false,
+			pinSpacing: true,
 			scrub: false,
 			//markers:true,
 		});

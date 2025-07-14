@@ -259,6 +259,7 @@ textarea:not([rows]) {
     max-width: 1280px;
     height: 50px;
     align-items: center;
+    
 }
 
 .l-map__ttl{
@@ -733,6 +734,9 @@ body{
 }
 .-h-100vh{
   height: 100vh;
+}
+.-h-50vh{
+  height: 50vh;
 }
 .-d-none{
   display: none;
